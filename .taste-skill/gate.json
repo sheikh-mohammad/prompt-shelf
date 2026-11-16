@@ -1,0 +1,2591 @@
+{
+ "start": "2026-11-16T15:32:14.216Z",
+ "round": 1,
+ "idle": 0,
+ "errors": 0,
+ "status": "fail",
+ "history": [
+  {
+   "at": "2026-11-16T15:48:32.134Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 71,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "apps/web/out/index.html",
+  "dir": "G:\\sheikh\\prompt-shelf",
+  "kind": "software",
+  "start": "2026-11-16T15:32:14.216Z",
+  "by": "start.mjs",
+  "url": null,
+  "category": "prompt library",
+  "primary": "Create prompt"
+ },
+ "manual": true,
+ "roundKey": "218ee506280426e9:da39a3ee",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "218ee506280426e9",
+ "page": "apps/web/out/index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "flush",
+    "where": "div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) > div.panel",
+    "msg": "section#features and section#marquee run together: -35px between their content, on one ground",
+    "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "flush"
+    ],
+    "wheres": [
+     "div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) > div.panel"
+    ]
+   },
+   {
+    "check": "cut-text",
+    "where": "div.wrap > div:nth-of-type(2) > div.marquee__track > span.marquee__item:nth-of-type(2) \"Code review summary · 12 uses\"",
+    "msg": "cut 24px at the left by the overflow of section#marquee > div.wrap > div:nth-of-type(2)",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "cut-text"
+    ],
+    "wheres": [
+     "div.wrap > div:nth-of-type(2) > div.marquee__track > span.marquee__item:nth-of-type(2) \"Code review summary · 12 uses\""
+    ]
+   },
+   {
+    "check": "cut-text",
+    "where": "div.wrap > div:nth-of-type(2) > div.marquee__track > span.marquee__item:nth-of-type(8) \"Data analysis brief · 48 uses\"",
+    "msg": "cut 137px at the right by the overflow of section#marquee > div.wrap > div:nth-of-type(2)",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "cut-text"
+    ],
+    "wheres": [
+     "div.wrap > div:nth-of-type(2) > div.marquee__track > span.marquee__item:nth-of-type(8) \"Data analysis brief · 48 uses\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "main#top > section.hero.hero--collage \"Your prompts, saved and ready to reuse\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "main#top > section.hero.hero--collage \"Your prompts, saved and ready to reuse\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#marquee \"Prompts in use across the library\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#marquee \"Prompts in use across the library\""
+    ]
+   },
+   {
+    "check": "text-only",
+    "where": "section#faq \"Questions about Prompt Shelf\"",
+    "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+    "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-only"
+    ],
+    "wheres": [
+     "section#faq \"Questions about Prompt Shelf\""
+    ]
+   },
+   {
+    "check": "button-styles",
+    "where": "div.hero-text > div.hero-copy > div.btn-row > a.btn.btn--primary \"Create prompt\"",
+    "msg": "one button style (pill, fill #1a4be0) in 2 heights: 34, 44px (\"Create prompt\" 44px, \"Create prompt\" 34px)",
+    "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "button-styles"
+    ],
+    "wheres": [
+     "div.hero-text > div.hero-copy > div.btn-row > a.btn.btn--primary \"Create prompt\""
+    ]
+   },
+   {
+    "check": "same-action",
+    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Create prompt\"",
+    "msg": "\"Create prompt\" appears 3 times in different looks: 34px and 44px tall, labels at 15px and 32px",
+    "fix": "draw one action the same way everywhere (only the nav copy may be one size smaller)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "same-action"
+    ],
+    "wheres": [
+     "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Create prompt\""
+    ]
+   },
+   {
+    "check": "copy-fact",
+    "where": "h1#hero-h \"Your prompts, saved and ready to reuse\"",
+    "msg": "the first screen holds no number, price, date, place, platform or genre",
+    "fix": "put one hard fact from the brief on the first screen: a number, a price, a date, the place, the platforms it runs on or a game's genre; take it from the brief or remove the claim",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-fact"
+    ],
+    "wheres": [
+     "h1#hero-h \"Your prompts, saved and ready to reuse\""
+    ]
+   },
+   {
+    "check": "copy-headings",
+    "where": "div.wrap > div.group > div.section-head > h2 \"Save, collect, filter\"",
+    "msg": "\"Save, collect, filter\" names no product, part, place or section (5 headings like it; at most one brand line per page) (and 4 more like it: \"Build collections\", \"Star favourites\", \"Public and private\", \"Do collections sync acro\")",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headings"
+    ],
+    "wheres": [
+     "div.wrap > div.group > div.section-head > h2 \"Save, collect, filter\""
+    ]
+   },
+   {
+    "check": "busy-ground",
+    "where": "h2#marquee-h \"Prompts in use across the library\"",
+    "msg": "text over a busy part of a picture (its luminance varies by 0.33 under the words)",
+    "fix": "move the text to a calm part of the picture, or put it on a panel",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "busy-ground"
+    ],
+    "wheres": [
+     "h2#marquee-h \"Prompts in use across the library\""
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#marquee / section#faq",
+    "msg": "715px between these sections, +147% against the median 290px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#marquee / section#faq"
+    ]
+   },
+   {
+    "check": "hole",
+    "where": "main#top > section.hero.hero--collage \"Your prompts, saved and ready to reuse\"",
+    "msg": "an empty hole 840x336px inside the section (37% of the screen's height), with content above and below it",
+    "fix": "close the empty space: move the content together, or give the space the visual it lacks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "hole"
+    ],
+    "wheres": [
+     "main#top > section.hero.hero--collage \"Your prompts, saved and ready to reuse\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item > a.nav__link \"Save\"",
+    "msg": "\"Save\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "div.wrap.nav__bar > nav.nav__links > div.nav__item > a.nav__link \"Save\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "div.nav__item > div.nav__menu > div.wrap > a.menu-card:nth-of-type(1) \"CollectionsGroup prompts into sets you r\"",
+    "msg": "\"CollectionsGroup prompts into sets you r\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "div.nav__item > div.nav__menu > div.wrap > a.menu-card:nth-of-type(1) \"CollectionsGroup prompts into sets you r\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "div.nav__item > div.nav__menu > div.wrap > a.menu-card:nth-of-type(2) \"FavouritesStar the prompts you return to\"",
+    "msg": "\"FavouritesStar the prompts you return to\" goes to #favourites, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "div.nav__item > div.nav__menu > div.wrap > a.menu-card:nth-of-type(2) \"FavouritesStar the prompts you return to\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "div.nav__item > div.nav__menu > div.wrap > a.menu-card:nth-of-type(3) \"Public and privateFilter who can see eac\"",
+    "msg": "\"Public and privateFilter who can see eac\" goes to #filter, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "div.nav__item > div.nav__menu > div.wrap > a.menu-card:nth-of-type(3) \"Public and privateFilter who can see eac\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(1) \"Create\"",
+    "msg": "\"Create\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(1) \"Create\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(2) \"Library\"",
+    "msg": "\"Library\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(2) \"Library\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(3) \"Plans\"",
+    "msg": "\"Plans\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(3) \"Plans\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(4) \"Help\"",
+    "msg": "\"Help\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(4) \"Help\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.nav__link.nav__second \"Log in\"",
+    "msg": "\"Log in\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "header.nav > div.wrap.nav__bar > div.nav__actions > a.nav__link.nav__second \"Log in\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Create prompt\"",
+    "msg": "\"Create prompt\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Create prompt\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "div.hero-text > div.hero-copy > div.btn-row > a.btn.btn--primary \"Create prompt\"",
+    "msg": "\"Create prompt\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "div.hero-text > div.hero-copy > div.btn-row > a.btn.btn--primary \"Create prompt\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "div.hero-text > div.hero-copy > div.btn-row > a.btn.btn--secondary \"Browse library\"",
+    "msg": "\"Browse library\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "div.hero-text > div.hero-copy > div.btn-row > a.btn.btn--secondary \"Browse library\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "footer#contact > div.wrap > div.closing__cta > a.btn.btn--primary \"Create prompt\"",
+    "msg": "\"Create prompt\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "footer#contact > div.wrap > div.closing__cta > a.btn.btn--primary \"Create prompt\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "div.span-3.start-7 > ul > li:nth-of-type(1) > a \"Create prompt\"",
+    "msg": "\"Create prompt\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "div.span-3.start-7 > ul > li:nth-of-type(1) > a \"Create prompt\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "div.span-3.start-7 > ul > li:nth-of-type(2) > a \"Collections\"",
+    "msg": "\"Collections\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "div.span-3.start-7 > ul > li:nth-of-type(2) > a \"Collections\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "div.span-3.start-7 > ul > li:nth-of-type(3) > a \"Favourites\"",
+    "msg": "\"Favourites\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "div.span-3.start-7 > ul > li:nth-of-type(3) > a \"Favourites\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "div.footer__col:nth-of-type(3) > ul > li:nth-of-type(1) > a \"About\"",
+    "msg": "\"About\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "div.footer__col:nth-of-type(3) > ul > li:nth-of-type(1) > a \"About\""
+    ]
+   },
+   {
+    "check": "links",
+    "where": "div.footer__col:nth-of-type(3) > ul > li:nth-of-type(2) > a \"Help centre\"",
+    "msg": "\"Help centre\" goes to #save, which is not on this page",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "links"
+    ],
+    "wheres": [
+     "div.footer__col:nth-of-type(3) > ul > li:nth-of-type(2) > a \"Help centre\""
+    ]
+   },
+   {
+    "check": "effect-kind",
+    "where": "section#marquee",
+    "msg": "1 [data-moment] mark that never runs: marquee-row on section#marquee (moments.js never mounted it); a moment is judged as one only when it runs",
+    "fix": "load assets/moments/moments.js (system.js does it for a page with [data-moment]) and keep the dealt id, or take the data-moment mark off the section",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "effect-kind"
+    ],
+    "wheres": [
+     "section#marquee"
+    ]
+   },
+   {
+    "check": "empty-area",
+    "where": "section#marquee \"Prompts in use across the library\"",
+    "msg": "69% of the section is empty: 496px under its last (div:nth-of-type(2)), in its 720px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "empty-area"
+    ],
+    "wheres": [
+     "section#marquee \"Prompts in use across the library\""
+    ]
+   },
+   {
+    "check": "hero-enter",
+    "where": "main#top > section.hero.hero--collage",
+    "msg": "the hero does not enter on load: no head line setting html.m-enter (motion.md, The hero's entrance)",
+    "fix": "put data-enter on the hero <section> and keep the head line from starter.html that sets html.m-enter",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "hero-enter"
+    ],
+    "wheres": [
+     "main#top > section.hero.hero--collage"
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#marquee \"Prompts in use across the libraryBlog po\"",
+    "msg": "the section starts at 3696px, 96px below the screen grid (4 x 900px): sections start on whole screens (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-short",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#marquee \"Prompts in use across the libraryBlog po\"",
+     "#marquee section.marquee-row.mo-mq \"Prompts in use across the librar\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#faq \"Questions about Prompt ShelfCan I share \"",
+    "msg": "the section starts at 4596px, 96px below the screen grid (5 x 900px): sections start on whole screens (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-short",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#faq \"Questions about Prompt ShelfCan I share \"",
+     "#faq section.section \"Questions about Prompt ShelfCan \""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "footer#contact \"Create your first promptSave it, collect\"",
+    "msg": "the section starts at 5496px, 96px below the screen grid (6 x 900px): sections start on whole screens (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "footer#contact \"Create your first promptSave it, collect\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#features \"Save, collect, filterEvery prompt you wr\"",
+    "msg": "the section's content does not fit it: its content is 247px taller than the section (scrollHeight 2047, clientHeight 1800); its lowest content ends 2046px below its top, past 1728px (the section less 72px of bottom padding); 3 parts lie outside the section's box; its first screen group ends 1161px below its top, past 828px (SR-2)",
+    "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "section#features \"Save, collect, filterEvery prompt you wr\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "div.wrap > div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) \"Public and privateFilter who can see eac\"",
+    "msg": "\"Public and privateFilter who can\" lies outside section 3 (1617 to 2047px from its top; the section is 1800px tall) (SR-2)",
+    "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "div.wrap > div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) \"Public and privateFilter who can see eac\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) > div.panel",
+    "msg": "the <div> lies outside section 3 (1723 to 2047px from its top; the section is 1800px tall) (and 1 more like it: \"Public and private toggl\") (SR-2)",
+    "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) > div.panel"
+    ]
+   },
+   {
+    "check": "section-air",
+    "where": "section#marquee / section#faq",
+    "msg": "741px of air between the content of these two sections: 128-480px (64-600px WARN) (every gap out of the band at 1440px, top to bottom: -34px after \"Save, collect, filte\", 741px after \"Prompts in use acros\") (SR-3)",
+    "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-air"
+    ],
+    "wheres": [
+     "section#marquee / section#faq"
+    ]
+   },
+   {
+    "check": "section-air",
+    "where": "section#features / section#marquee",
+    "msg": "the content of these two sections overlaps by 34px: 128-480px of air between them (SR-3)",
+    "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-air"
+    ],
+    "wheres": [
+     "section#features / section#marquee"
+    ]
+   },
+   {
+    "check": "section-air",
+    "where": "section#marquee \"Prompts in use across the libraryBlog po\"",
+    "msg": "the content fills 20.6% of the section's height (186 of 900px): 55% or more (40% WARN) (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-air"
+    ],
+    "wheres": [
+     "section#marquee \"Prompts in use across the libraryBlog po\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section#features \"Save, collect, filterEvery prompt you wr\"",
+    "msg": "the screen at scroll 3600px (stride 4) shows 175px of section 3 and the content of 2 sections, over 24px each beside section 4: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section",
+     "neighbour"
+    ],
+    "wheres": [
+     "section#features \"Save, collect, filterEvery prompt you wr\"",
+     "#features section.section.g2 \"Save, collect, filterEvery promp\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section#marquee \"Prompts in use across the libraryBlog po\"",
+    "msg": "the screen at scroll 4500px (stride 5) shows 24px of section 4 beside section 5: a screen shows one section (another may peek 8px, 24px WARN) (2 of 10 screens show a peek: two or more on a page of 8 sections or fewer FAIL) (and 1 more like it: scroll 5400px) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section",
+     "neighbour"
+    ],
+    "wheres": [
+     "section#marquee \"Prompts in use across the libraryBlog po\"",
+     "section#marquee > div.wrap > div:nth-of-type(2) \"Blog post opener · 24 usesCode review su\"",
+     "#marquee section.marquee-row \"Prompts in use across the librar\"",
+     "#marquee section.marquee-row.mo-mq \"Prompts in use across the librar\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section#faq > div.wrap > div.faq > div.faq__item:nth-of-type(1) \"Can I share prompts publicly?Yes. Every \"",
+    "msg": "a band: a box 89% of the section wide on a ground of its own that holds the heading or the intro: the section's own ground is the band (SR-4)",
+    "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section",
+     "neighbour"
+    ],
+    "wheres": [
+     "section#faq > div.wrap > div.faq > div.faq__item:nth-of-type(1) \"Can I share prompts publicly?Yes. Every \"",
+     "section#faq > div.wrap > div.faq > div.faq__item:nth-of-type(2) \"Do collections sync across devices?Your \"",
+     "#faq section.section \"Questions about Prompt ShelfCan \""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "a.skip-link \"Skip to content\"",
+    "msg": "a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "a.skip-link \"Skip to content\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.wrap > div:nth-of-type(2) > div.marquee__track > span.marquee__item:nth-of-type(3) \"Data analysis brief · 48 uses\"",
+    "msg": "1 text block starts on a left line at x -13, -93px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.wrap > div:nth-of-type(2) > div.marquee__track > span.marquee__item:nth-of-type(3) \"Data analysis brief · 48 uses\""
+    ]
+   },
+   {
+    "check": "row-lines",
+    "where": "div.app__pane.app__pane--open > div.ui-panel.ui-win > div.ui-win__body > div.ui-win__main \"VariableValuePreviewToneProfessionalSetA\"",
+    "msg": "a sideways scroller: 134px of it hidden behind overflow-x: auto (SR-7)",
+    "fix": "show every item inside the container, or stack them: no sideways scroller, no half-cut carousel",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "row-lines"
+    ],
+    "wheres": [
+     "div.app__pane.app__pane--open > div.ui-panel.ui-win > div.ui-win__body > div.ui-win__main \"VariableValuePreviewToneProfessionalSetA\""
+    ]
+   },
+   {
+    "check": "row-lines",
+    "where": "section#marquee > div.wrap > div:nth-of-type(2) \"Blog post opener · 24 usesCode review su\"",
+    "msg": "a clipped carousel: 1 item cut at rest (SR-7)",
+    "fix": "show every item inside the container, or stack them: no sideways scroller, no half-cut carousel",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "row-lines"
+    ],
+    "wheres": [
+     "section#marquee > div.wrap > div:nth-of-type(2) \"Blog post opener · 24 usesCode review su\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#app-frame > div.wrap > div.group > div.app \"Library / All promptsSearch/All412Collec\"",
+    "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 614, on none of the split lines 623 (k=5), 732 (k=6), 841 (k=7) (SR-8)",
+    "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#app-frame > div.wrap > div.group > div.app \"Library / All promptsSearch/All412Collec\""
+    ]
+   },
+   {
+    "check": "hero-fill",
+    "where": "section#app-frame \"Your library, one window\"",
+    "msg": "the next section shows on the first screen: it starts at 936px on a 1067px screen (the hero ends at 844px)",
+    "fix": "let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "hero-fill"
+    ],
+    "wheres": [
+     "section#app-frame \"Your library, one window\""
+    ]
+   },
+   {
+    "check": "off-viewport",
+    "where": "(the page)",
+    "msg": "the page is 493px wide on a 390px screen and scrolls sideways",
+    "fix": "keep it inside the screen at this width: let it shrink, wrap or stack",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-viewport"
+    ],
+    "wheres": [
+     "(the page)"
+    ]
+   },
+   {
+    "check": "cut-text",
+    "where": "div.wrap > div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\"",
+    "msg": "cut 103px by the right edge of the screen",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "cut-text"
+    ],
+    "wheres": [
+     "div.wrap > div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\""
+    ]
+   },
+   {
+    "check": "off-grid",
+    "where": "div.closing__links > div.footer__legal > span > a:nth-of-type(2) \"Terms\"",
+    "msg": "left edge at 210.5px, 9.5px off a common edge of its section at 201px (3 elements, like a)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-grid"
+    ],
+    "wheres": [
+     "div.closing__links > div.footer__legal > span > a:nth-of-type(2) \"Terms\""
+    ]
+   },
+   {
+    "check": "section-tile",
+    "where": "main#top > section.hero.hero--collage \"Your prompts, saved and ready to reuse\"",
+    "msg": "the first section is 844px tall (0.79 screens at 390x844), shorter than the screen: the first screen shows 788px of it and 223px of the next section, its heading \"Your library, one window\" on screen",
+    "fix": "make the hero exactly one screen (height: 100svh) with its content between the nav and 24px above the fold",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-tile"
+    ],
+    "wheres": [
+     "main#top > section.hero.hero--collage \"Your prompts, saved and ready to reuse\""
+    ]
+   },
+   {
+    "check": "menu-toggle",
+    "where": "header.nav > div.wrap.nav__bar > button.nav__toggle \"Menu\"",
+    "msg": "the menu button keeps aria-expanded=\"false\" after a click: its state never changes (system.js flips it on .nav__toggle)",
+    "fix": "use the starter's button: <button class=\"nav__toggle\" type=\"button\" aria-expanded=\"false\" aria-label=\"Menu\">; system.js flips it",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "menu-toggle"
+    ],
+    "wheres": [
+     "header.nav > div.wrap.nav__bar > button.nav__toggle \"Menu\""
+    ]
+   },
+   {
+    "check": "off-viewport",
+    "where": "header.nav > div.wrap.nav__bar \"Prompt Shelf\"",
+    "msg": "at 320px wide it runs 149px past the screen's right edge (the page is 493px wide and scrolls sideways)",
+    "fix": "keep it inside the screen at this width: let it shrink, wrap or stack",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-viewport"
+    ],
+    "wheres": [
+     "header.nav > div.wrap.nav__bar \"Prompt Shelf\""
+    ]
+   },
+   {
+    "check": "off-viewport",
+    "where": "div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\"",
+    "msg": "at 320px wide it runs 173px past the screen's right edge (the page is 493px wide and scrolls sideways)",
+    "fix": "keep it inside the screen at this width: let it shrink, wrap or stack",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-viewport"
+    ],
+    "wheres": [
+     "div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#contact div.span-3.start-7 \"ProductCreate promptCollectionsF\"",
+    "msg": "starts at x 234; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#contact div.span-3.start-7 \"ProductCreate promptCollectionsF\""
+    ]
+   },
+   {
+    "check": "sparse",
+    "where": "#marquee section.marquee-row \"Prompts in use across the librar\"",
+    "msg": "its content fills 17% of its screen; merge it or give it its visual (0.55 is the aim)",
+    "fix": "fill the section or make it a screen shorter",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "sparse"
+    ],
+    "wheres": [
+     "#marquee section.marquee-row \"Prompts in use across the librar\""
+    ]
+   },
+   {
+    "check": "edge-right",
+    "where": "nav actions",
+    "msg": "end at x 469, the page's right line is 366",
+    "fix": "end it on the .wrap right line",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-right"
+    ],
+    "wheres": [
+     "nav actions"
+    ]
+   },
+   {
+    "check": "screen-short",
+    "where": "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\"",
+    "msg": "844px tall; one screen under the nav is 1067px",
+    "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-short"
+    ],
+    "wheres": [
+     "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\"",
+    "msg": "framed, 74px of #app-frame section.section \"Your library, one windowThe save\" shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\""
+    ]
+   },
+   {
+    "check": "sparse",
+    "where": "#marquee section.marquee-row.mo-mq \"Prompts in use across the librar\"",
+    "msg": "its content fills 20% of its screen; merge it or give it its visual (0.55 is the aim)",
+    "fix": "fill the section or make it a screen shorter",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "sparse"
+    ],
+    "wheres": [
+     "#marquee section.marquee-row.mo-mq \"Prompts in use across the librar\""
+    ]
+   },
+   {
+    "check": "hero-fold",
+    "where": "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\"",
+    "msg": "ends at y 844, above the fold (1067)",
+    "fix": "the hero fills the first screen alone, its button inside it",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-fold"
+    ],
+    "wheres": [
+     "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\""
+    ]
+   },
+   {
+    "check": "hero-fold",
+    "where": "#app-frame section.section \"Your library, one windowThe save\"",
+    "msg": "shows on the first screen from y 940",
+    "fix": "the hero fills the first screen alone, its button inside it",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-fold"
+    ],
+    "wheres": [
+     "#app-frame section.section \"Your library, one windowThe save\""
+    ]
+   },
+   {
+    "check": "overflow-x",
+    "where": "page",
+    "msg": "the page scrolls sideways",
+    "fix": "remove what scrolls sideways",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "overflow-x"
+    ],
+    "wheres": [
+     "page"
+    ]
+   },
+   {
+    "check": "hero-maxchars",
+    "where": "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\"",
+    "msg": "with a 47-character h1 (heroes.json maxChars): ends at y 844, above the fold (1067)",
+    "fix": "shorten the h1 or give the hero room for the longest headline",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-maxchars"
+    ],
+    "wheres": [
+     "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\""
+    ]
+   },
+   {
+    "check": "hero-maxchars",
+    "where": "#app-frame section.section \"Your library, one windowThe save\"",
+    "msg": "with a 47-character h1 (heroes.json maxChars): shows on the first screen from y 940",
+    "fix": "shorten the h1 or give the hero room for the longest headline",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-maxchars"
+    ],
+    "wheres": [
+     "#app-frame section.section \"Your library, one windowThe save\""
+    ]
+   },
+   {
+    "check": "hero-maxchars",
+    "where": "page",
+    "msg": "with a 47-character h1 the page scrolls sideways",
+    "fix": "shorten the h1 or give the hero room for the longest headline",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-maxchars"
+    ],
+    "wheres": [
+     "page"
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "assets",
+    "where": "(the page)",
+    "msg": "the data file index.html/__next._tree.txt?_rsc=5CB68i4pnAekjehf did not load (404)",
+    "fix": "fix the path, or remove the reference",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cut-text",
+    "where": "div.ui-win__main > ul.ui-win__rows > li.ui-win__row:nth-of-type(2) > span.ui-win__who \"Audience\"",
+    "msg": "shortened with an ellipsis (and 1 more like it: \"Length\")",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cut-text",
+    "where": "h2#marquee-h \"Prompts in use across the library\"",
+    "msg": "sits across the edge of a panel behind it",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "card-visual",
+    "where": "section#faq > div.wrap > div.faq \"Can I share prompts publicly? Yes. Every\"",
+    "msg": "3 cards hold only text: no picture, icon, UI fragment or effect in any of them",
+    "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#features \"Save, collect, filter\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-actions",
+    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Create prompt\"",
+    "msg": "2 labels for one target /index.html#save: \"Create prompt\", \"Browse library\"",
+    "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "text-contrast",
+    "where": "div.ui-win__main > ul.ui-win__rows > li.ui-win__row:nth-of-type(1) > span.ui-win__st \"Open\"",
+    "msg": "2 lines of text in drawn mocks read under 4.5:1 (1 colour pair), the worst \"Open\" in #ffffff on #f4f4f4 at 1.1:1",
+    "fix": "lift the mocks' muted text (labels, meta, initials) to 4.5:1 on their own panel, or set it larger",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#top > section.hero.hero--collage / section#app-frame",
+    "msg": "180px between these sections, -38% against the median 290px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#app-frame / section#features",
+    "msg": "160px between these sections, -45% against the median 290px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#features / section#marquee",
+    "msg": "the sections overlap by 35px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#faq / footer#contact",
+    "msg": "400px between these sections, +38% against the median 290px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "div.closing__links > div.footer__legal > span > a:nth-of-type(1) \"Privacy\"",
+    "msg": "\"Privacy\" goes to privacy.html, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "div.closing__links > div.footer__legal > span > a:nth-of-type(2) \"Terms\"",
+    "msg": "\"Terms\" goes to terms.html, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "div.wrap > div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\"",
+    "msg": "\"Photographs via kit library stand-ins\" goes to credits.html, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fade-cut",
+    "where": "div.d-win__body > div.d-main > div.d-tabs > span:nth-of-type(1) \"All 412\"",
+    "msg": "2 lines of div.d-win fade out under its edge (\"All 412\", \"Writing · 4 variables\"): drawn at a fraction of #111111 on #f4f4f4, half-erased",
+    "fix": "fit the mock's rows inside its panel (fewer rows, a taller panel), or end the fade below the last whole row: no row half-erased",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "button-contrast",
+    "where": "div.hero-text > div.hero-copy > div.btn-row > a.btn.btn--secondary \"Browse library\"",
+    "msg": "the button \"Browse library\" (#e9e9e9) stands only 1.21:1 off the ground around it: it reads as part of the ground, or as switched off",
+    "fix": "give the button a fill that stands at least 1.5:1 off what is around it, or an outline in the ink",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "heading-order",
+    "where": "div.closing__links:nth-of-type(2) > div.grid:nth-of-type(1) > div.span-3.start-7:nth-of-type(2) > h4 \"Product\"",
+    "msg": "\"Product\" is an h4 after an h2: a level is skipped (in the header or footer)",
+    "fix": "step down one level at a time (h1, h2, h3): change the tag, not the look; a footer's column heads are h3",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "share-meta",
+    "where": "head",
+    "msg": "the head lacks og:title, og:description: a shared link shows no picture or title of its own",
+    "fix": "copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "action-repeat",
+    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary:nth-of-type(2) \"create prompt\"",
+    "msg": "\"create prompt\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fold-cut",
+    "where": "div.wrap > div.group > div.section-head > h2 \"Your library, one window\"",
+    "msg": "a 32px line is sliced by the bottom of the first screen (39px of it below the fold)",
+    "fix": "size the hero so the heading ends above the fold, or starts below it",
+    "widths": [
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-em-dash",
+    "msg": "5 em dashes in the body (budget 2)",
+    "fix": "use a comma, a colon, parentheses or a full stop where each is natural (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "(the copy)",
+    "exact": false
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 239,
+   "layout": 5
+  }
+ },
+ "open": [
+  {
+   "check": "flush",
+   "where": "div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) > div.panel",
+   "msg": "section#features and section#marquee run together: -35px between their content, on one ground",
+   "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "flush"
+   ],
+   "wheres": [
+    "div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) > div.panel"
+   ]
+  },
+  {
+   "check": "cut-text",
+   "where": "div.wrap > div:nth-of-type(2) > div.marquee__track > span.marquee__item:nth-of-type(2) \"Code review summary · 12 uses\"",
+   "msg": "cut 24px at the left by the overflow of section#marquee > div.wrap > div:nth-of-type(2)",
+   "fix": "give the text room: no overflow clipping a line, no line past its box",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "cut-text"
+   ],
+   "wheres": [
+    "div.wrap > div:nth-of-type(2) > div.marquee__track > span.marquee__item:nth-of-type(2) \"Code review summary · 12 uses\""
+   ]
+  },
+  {
+   "check": "cut-text",
+   "where": "div.wrap > div:nth-of-type(2) > div.marquee__track > span.marquee__item:nth-of-type(8) \"Data analysis brief · 48 uses\"",
+   "msg": "cut 137px at the right by the overflow of section#marquee > div.wrap > div:nth-of-type(2)",
+   "fix": "give the text room: no overflow clipping a line, no line past its box",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "cut-text"
+   ],
+   "wheres": [
+    "div.wrap > div:nth-of-type(2) > div.marquee__track > span.marquee__item:nth-of-type(8) \"Data analysis brief · 48 uses\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "main#top > section.hero.hero--collage \"Your prompts, saved and ready to reuse\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "main#top > section.hero.hero--collage \"Your prompts, saved and ready to reuse\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#marquee \"Prompts in use across the library\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#marquee \"Prompts in use across the library\""
+   ]
+  },
+  {
+   "check": "text-only",
+   "where": "section#faq \"Questions about Prompt Shelf\"",
+   "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+   "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-only"
+   ],
+   "wheres": [
+    "section#faq \"Questions about Prompt Shelf\""
+   ]
+  },
+  {
+   "check": "button-styles",
+   "where": "div.hero-text > div.hero-copy > div.btn-row > a.btn.btn--primary \"Create prompt\"",
+   "msg": "one button style (pill, fill #1a4be0) in 2 heights: 34, 44px (\"Create prompt\" 44px, \"Create prompt\" 34px)",
+   "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "button-styles"
+   ],
+   "wheres": [
+    "div.hero-text > div.hero-copy > div.btn-row > a.btn.btn--primary \"Create prompt\""
+   ]
+  },
+  {
+   "check": "same-action",
+   "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Create prompt\"",
+   "msg": "\"Create prompt\" appears 3 times in different looks: 34px and 44px tall, labels at 15px and 32px",
+   "fix": "draw one action the same way everywhere (only the nav copy may be one size smaller)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "same-action"
+   ],
+   "wheres": [
+    "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Create prompt\""
+   ]
+  },
+  {
+   "check": "copy-fact",
+   "where": "h1#hero-h \"Your prompts, saved and ready to reuse\"",
+   "msg": "the first screen holds no number, price, date, place, platform or genre",
+   "fix": "put one hard fact from the brief on the first screen: a number, a price, a date, the place, the platforms it runs on or a game's genre; take it from the brief or remove the claim",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-fact"
+   ],
+   "wheres": [
+    "h1#hero-h \"Your prompts, saved and ready to reuse\""
+   ]
+  },
+  {
+   "check": "copy-headings",
+   "where": "div.wrap > div.group > div.section-head > h2 \"Save, collect, filter\"",
+   "msg": "\"Save, collect, filter\" names no product, part, place or section (5 headings like it; at most one brand line per page) (and 4 more like it: \"Build collections\", \"Star favourites\", \"Public and private\", \"Do collections sync acro\")",
+   "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headings"
+   ],
+   "wheres": [
+    "div.wrap > div.group > div.section-head > h2 \"Save, collect, filter\""
+   ]
+  },
+  {
+   "check": "busy-ground",
+   "where": "h2#marquee-h \"Prompts in use across the library\"",
+   "msg": "text over a busy part of a picture (its luminance varies by 0.33 under the words)",
+   "fix": "move the text to a calm part of the picture, or put it on a panel",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "busy-ground"
+   ],
+   "wheres": [
+    "h2#marquee-h \"Prompts in use across the library\""
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#marquee / section#faq",
+   "msg": "715px between these sections, +147% against the median 290px",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#marquee / section#faq"
+   ]
+  },
+  {
+   "check": "hole",
+   "where": "main#top > section.hero.hero--collage \"Your prompts, saved and ready to reuse\"",
+   "msg": "an empty hole 840x336px inside the section (37% of the screen's height), with content above and below it",
+   "fix": "close the empty space: move the content together, or give the space the visual it lacks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "hole"
+   ],
+   "wheres": [
+    "main#top > section.hero.hero--collage \"Your prompts, saved and ready to reuse\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item > a.nav__link \"Save\"",
+   "msg": "\"Save\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "div.wrap.nav__bar > nav.nav__links > div.nav__item > a.nav__link \"Save\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "div.nav__item > div.nav__menu > div.wrap > a.menu-card:nth-of-type(1) \"CollectionsGroup prompts into sets you r\"",
+   "msg": "\"CollectionsGroup prompts into sets you r\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "div.nav__item > div.nav__menu > div.wrap > a.menu-card:nth-of-type(1) \"CollectionsGroup prompts into sets you r\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "div.nav__item > div.nav__menu > div.wrap > a.menu-card:nth-of-type(2) \"FavouritesStar the prompts you return to\"",
+   "msg": "\"FavouritesStar the prompts you return to\" goes to #favourites, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "div.nav__item > div.nav__menu > div.wrap > a.menu-card:nth-of-type(2) \"FavouritesStar the prompts you return to\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "div.nav__item > div.nav__menu > div.wrap > a.menu-card:nth-of-type(3) \"Public and privateFilter who can see eac\"",
+   "msg": "\"Public and privateFilter who can see eac\" goes to #filter, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "div.nav__item > div.nav__menu > div.wrap > a.menu-card:nth-of-type(3) \"Public and privateFilter who can see eac\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(1) \"Create\"",
+   "msg": "\"Create\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(1) \"Create\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(2) \"Library\"",
+   "msg": "\"Library\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(2) \"Library\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(3) \"Plans\"",
+   "msg": "\"Plans\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(3) \"Plans\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(4) \"Help\"",
+   "msg": "\"Help\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(4) \"Help\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.nav__link.nav__second \"Log in\"",
+   "msg": "\"Log in\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "header.nav > div.wrap.nav__bar > div.nav__actions > a.nav__link.nav__second \"Log in\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Create prompt\"",
+   "msg": "\"Create prompt\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Create prompt\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "div.hero-text > div.hero-copy > div.btn-row > a.btn.btn--primary \"Create prompt\"",
+   "msg": "\"Create prompt\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "div.hero-text > div.hero-copy > div.btn-row > a.btn.btn--primary \"Create prompt\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "div.hero-text > div.hero-copy > div.btn-row > a.btn.btn--secondary \"Browse library\"",
+   "msg": "\"Browse library\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "div.hero-text > div.hero-copy > div.btn-row > a.btn.btn--secondary \"Browse library\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "footer#contact > div.wrap > div.closing__cta > a.btn.btn--primary \"Create prompt\"",
+   "msg": "\"Create prompt\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "footer#contact > div.wrap > div.closing__cta > a.btn.btn--primary \"Create prompt\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "div.span-3.start-7 > ul > li:nth-of-type(1) > a \"Create prompt\"",
+   "msg": "\"Create prompt\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "div.span-3.start-7 > ul > li:nth-of-type(1) > a \"Create prompt\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "div.span-3.start-7 > ul > li:nth-of-type(2) > a \"Collections\"",
+   "msg": "\"Collections\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "div.span-3.start-7 > ul > li:nth-of-type(2) > a \"Collections\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "div.span-3.start-7 > ul > li:nth-of-type(3) > a \"Favourites\"",
+   "msg": "\"Favourites\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "div.span-3.start-7 > ul > li:nth-of-type(3) > a \"Favourites\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "div.footer__col:nth-of-type(3) > ul > li:nth-of-type(1) > a \"About\"",
+   "msg": "\"About\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "div.footer__col:nth-of-type(3) > ul > li:nth-of-type(1) > a \"About\""
+   ]
+  },
+  {
+   "check": "links",
+   "where": "div.footer__col:nth-of-type(3) > ul > li:nth-of-type(2) > a \"Help centre\"",
+   "msg": "\"Help centre\" goes to #save, which is not on this page",
+   "fix": "point every link at a real section, page or file",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "links"
+   ],
+   "wheres": [
+    "div.footer__col:nth-of-type(3) > ul > li:nth-of-type(2) > a \"Help centre\""
+   ]
+  },
+  {
+   "check": "effect-kind",
+   "where": "section#marquee",
+   "msg": "1 [data-moment] mark that never runs: marquee-row on section#marquee (moments.js never mounted it); a moment is judged as one only when it runs",
+   "fix": "load assets/moments/moments.js (system.js does it for a page with [data-moment]) and keep the dealt id, or take the data-moment mark off the section",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "effect-kind"
+   ],
+   "wheres": [
+    "section#marquee"
+   ]
+  },
+  {
+   "check": "empty-area",
+   "where": "section#marquee \"Prompts in use across the library\"",
+   "msg": "69% of the section is empty: 496px under its last (div:nth-of-type(2)), in its 720px of rows (WARN over 35%, FAIL over 50%)",
+   "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "empty-area"
+   ],
+   "wheres": [
+    "section#marquee \"Prompts in use across the library\""
+   ]
+  },
+  {
+   "check": "hero-enter",
+   "where": "main#top > section.hero.hero--collage",
+   "msg": "the hero does not enter on load: no head line setting html.m-enter (motion.md, The hero's entrance)",
+   "fix": "put data-enter on the hero <section> and keep the head line from starter.html that sets html.m-enter",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "hero-enter"
+   ],
+   "wheres": [
+    "main#top > section.hero.hero--collage"
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#marquee \"Prompts in use across the libraryBlog po\"",
+   "msg": "the section starts at 3696px, 96px below the screen grid (4 x 900px): sections start on whole screens (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-short",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#marquee \"Prompts in use across the libraryBlog po\"",
+    "#marquee section.marquee-row.mo-mq \"Prompts in use across the librar\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#faq \"Questions about Prompt ShelfCan I share \"",
+   "msg": "the section starts at 4596px, 96px below the screen grid (5 x 900px): sections start on whole screens (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-short",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#faq \"Questions about Prompt ShelfCan I share \"",
+    "#faq section.section \"Questions about Prompt ShelfCan \""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "footer#contact \"Create your first promptSave it, collect\"",
+   "msg": "the section starts at 5496px, 96px below the screen grid (6 x 900px): sections start on whole screens (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "footer#contact \"Create your first promptSave it, collect\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#features \"Save, collect, filterEvery prompt you wr\"",
+   "msg": "the section's content does not fit it: its content is 247px taller than the section (scrollHeight 2047, clientHeight 1800); its lowest content ends 2046px below its top, past 1728px (the section less 72px of bottom padding); 3 parts lie outside the section's box; its first screen group ends 1161px below its top, past 828px (SR-2)",
+   "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "section#features \"Save, collect, filterEvery prompt you wr\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "div.wrap > div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) \"Public and privateFilter who can see eac\"",
+   "msg": "\"Public and privateFilter who can\" lies outside section 3 (1617 to 2047px from its top; the section is 1800px tall) (SR-2)",
+   "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "div.wrap > div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) \"Public and privateFilter who can see eac\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) > div.panel",
+   "msg": "the <div> lies outside section 3 (1723 to 2047px from its top; the section is 1800px tall) (and 1 more like it: \"Public and private toggl\") (SR-2)",
+   "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) > div.panel"
+   ]
+  },
+  {
+   "check": "section-air",
+   "where": "section#marquee / section#faq",
+   "msg": "741px of air between the content of these two sections: 128-480px (64-600px WARN) (every gap out of the band at 1440px, top to bottom: -34px after \"Save, collect, filte\", 741px after \"Prompts in use acros\") (SR-3)",
+   "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-air"
+   ],
+   "wheres": [
+    "section#marquee / section#faq"
+   ]
+  },
+  {
+   "check": "section-air",
+   "where": "section#features / section#marquee",
+   "msg": "the content of these two sections overlaps by 34px: 128-480px of air between them (SR-3)",
+   "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-air"
+   ],
+   "wheres": [
+    "section#features / section#marquee"
+   ]
+  },
+  {
+   "check": "section-air",
+   "where": "section#marquee \"Prompts in use across the libraryBlog po\"",
+   "msg": "the content fills 20.6% of the section's height (186 of 900px): 55% or more (40% WARN) (SR-3)",
+   "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-air"
+   ],
+   "wheres": [
+    "section#marquee \"Prompts in use across the libraryBlog po\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section#features \"Save, collect, filterEvery prompt you wr\"",
+   "msg": "the screen at scroll 3600px (stride 4) shows 175px of section 3 and the content of 2 sections, over 24px each beside section 4: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section",
+    "neighbour"
+   ],
+   "wheres": [
+    "section#features \"Save, collect, filterEvery prompt you wr\"",
+    "#features section.section.g2 \"Save, collect, filterEvery promp\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section#marquee \"Prompts in use across the libraryBlog po\"",
+   "msg": "the screen at scroll 4500px (stride 5) shows 24px of section 4 beside section 5: a screen shows one section (another may peek 8px, 24px WARN) (2 of 10 screens show a peek: two or more on a page of 8 sections or fewer FAIL) (and 1 more like it: scroll 5400px) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section",
+    "neighbour"
+   ],
+   "wheres": [
+    "section#marquee \"Prompts in use across the libraryBlog po\"",
+    "section#marquee > div.wrap > div:nth-of-type(2) \"Blog post opener · 24 usesCode review su\"",
+    "#marquee section.marquee-row \"Prompts in use across the librar\"",
+    "#marquee section.marquee-row.mo-mq \"Prompts in use across the librar\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section#faq > div.wrap > div.faq > div.faq__item:nth-of-type(1) \"Can I share prompts publicly?Yes. Every \"",
+   "msg": "a band: a box 89% of the section wide on a ground of its own that holds the heading or the intro: the section's own ground is the band (SR-4)",
+   "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section",
+    "neighbour"
+   ],
+   "wheres": [
+    "section#faq > div.wrap > div.faq > div.faq__item:nth-of-type(1) \"Can I share prompts publicly?Yes. Every \"",
+    "section#faq > div.wrap > div.faq > div.faq__item:nth-of-type(2) \"Do collections sync across devices?Your \"",
+    "#faq section.section \"Questions about Prompt ShelfCan \""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "a.skip-link \"Skip to content\"",
+   "msg": "a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "a.skip-link \"Skip to content\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.wrap > div:nth-of-type(2) > div.marquee__track > span.marquee__item:nth-of-type(3) \"Data analysis brief · 48 uses\"",
+   "msg": "1 text block starts on a left line at x -13, -93px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.wrap > div:nth-of-type(2) > div.marquee__track > span.marquee__item:nth-of-type(3) \"Data analysis brief · 48 uses\""
+   ]
+  },
+  {
+   "check": "row-lines",
+   "where": "div.app__pane.app__pane--open > div.ui-panel.ui-win > div.ui-win__body > div.ui-win__main \"VariableValuePreviewToneProfessionalSetA\"",
+   "msg": "a sideways scroller: 134px of it hidden behind overflow-x: auto (SR-7)",
+   "fix": "show every item inside the container, or stack them: no sideways scroller, no half-cut carousel",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "row-lines"
+   ],
+   "wheres": [
+    "div.app__pane.app__pane--open > div.ui-panel.ui-win > div.ui-win__body > div.ui-win__main \"VariableValuePreviewToneProfessionalSetA\""
+   ]
+  },
+  {
+   "check": "row-lines",
+   "where": "section#marquee > div.wrap > div:nth-of-type(2) \"Blog post opener · 24 usesCode review su\"",
+   "msg": "a clipped carousel: 1 item cut at rest (SR-7)",
+   "fix": "show every item inside the container, or stack them: no sideways scroller, no half-cut carousel",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "row-lines"
+   ],
+   "wheres": [
+    "section#marquee > div.wrap > div:nth-of-type(2) \"Blog post opener · 24 usesCode review su\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#app-frame > div.wrap > div.group > div.app \"Library / All promptsSearch/All412Collec\"",
+   "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 614, on none of the split lines 623 (k=5), 732 (k=6), 841 (k=7) (SR-8)",
+   "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#app-frame > div.wrap > div.group > div.app \"Library / All promptsSearch/All412Collec\""
+   ]
+  },
+  {
+   "check": "hero-fill",
+   "where": "section#app-frame \"Your library, one window\"",
+   "msg": "the next section shows on the first screen: it starts at 936px on a 1067px screen (the hero ends at 844px)",
+   "fix": "let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "hero-fill"
+   ],
+   "wheres": [
+    "section#app-frame \"Your library, one window\""
+   ]
+  },
+  {
+   "check": "off-viewport",
+   "where": "(the page)",
+   "msg": "the page is 493px wide on a 390px screen and scrolls sideways",
+   "fix": "keep it inside the screen at this width: let it shrink, wrap or stack",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-viewport"
+   ],
+   "wheres": [
+    "(the page)"
+   ]
+  },
+  {
+   "check": "cut-text",
+   "where": "div.wrap > div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\"",
+   "msg": "cut 103px by the right edge of the screen",
+   "fix": "give the text room: no overflow clipping a line, no line past its box",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "cut-text"
+   ],
+   "wheres": [
+    "div.wrap > div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\""
+   ]
+  },
+  {
+   "check": "off-grid",
+   "where": "div.closing__links > div.footer__legal > span > a:nth-of-type(2) \"Terms\"",
+   "msg": "left edge at 210.5px, 9.5px off a common edge of its section at 201px (3 elements, like a)",
+   "fix": "move it onto the page margin, or the column edge its section uses",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-grid"
+   ],
+   "wheres": [
+    "div.closing__links > div.footer__legal > span > a:nth-of-type(2) \"Terms\""
+   ]
+  },
+  {
+   "check": "section-tile",
+   "where": "main#top > section.hero.hero--collage \"Your prompts, saved and ready to reuse\"",
+   "msg": "the first section is 844px tall (0.79 screens at 390x844), shorter than the screen: the first screen shows 788px of it and 223px of the next section, its heading \"Your library, one window\" on screen",
+   "fix": "make the hero exactly one screen (height: 100svh) with its content between the nav and 24px above the fold",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-tile"
+   ],
+   "wheres": [
+    "main#top > section.hero.hero--collage \"Your prompts, saved and ready to reuse\""
+   ]
+  },
+  {
+   "check": "menu-toggle",
+   "where": "header.nav > div.wrap.nav__bar > button.nav__toggle \"Menu\"",
+   "msg": "the menu button keeps aria-expanded=\"false\" after a click: its state never changes (system.js flips it on .nav__toggle)",
+   "fix": "use the starter's button: <button class=\"nav__toggle\" type=\"button\" aria-expanded=\"false\" aria-label=\"Menu\">; system.js flips it",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "menu-toggle"
+   ],
+   "wheres": [
+    "header.nav > div.wrap.nav__bar > button.nav__toggle \"Menu\""
+   ]
+  },
+  {
+   "check": "off-viewport",
+   "where": "header.nav > div.wrap.nav__bar \"Prompt Shelf\"",
+   "msg": "at 320px wide it runs 149px past the screen's right edge (the page is 493px wide and scrolls sideways)",
+   "fix": "keep it inside the screen at this width: let it shrink, wrap or stack",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-viewport"
+   ],
+   "wheres": [
+    "header.nav > div.wrap.nav__bar \"Prompt Shelf\""
+   ]
+  },
+  {
+   "check": "off-viewport",
+   "where": "div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\"",
+   "msg": "at 320px wide it runs 173px past the screen's right edge (the page is 493px wide and scrolls sideways)",
+   "fix": "keep it inside the screen at this width: let it shrink, wrap or stack",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-viewport"
+   ],
+   "wheres": [
+    "div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#contact div.span-3.start-7 \"ProductCreate promptCollectionsF\"",
+   "msg": "starts at x 234; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#contact div.span-3.start-7 \"ProductCreate promptCollectionsF\""
+   ]
+  },
+  {
+   "check": "sparse",
+   "where": "#marquee section.marquee-row \"Prompts in use across the librar\"",
+   "msg": "its content fills 17% of its screen; merge it or give it its visual (0.55 is the aim)",
+   "fix": "fill the section or make it a screen shorter",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "sparse"
+   ],
+   "wheres": [
+    "#marquee section.marquee-row \"Prompts in use across the librar\""
+   ]
+  },
+  {
+   "check": "edge-right",
+   "where": "nav actions",
+   "msg": "end at x 469, the page's right line is 366",
+   "fix": "end it on the .wrap right line",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-right"
+   ],
+   "wheres": [
+    "nav actions"
+   ]
+  },
+  {
+   "check": "screen-short",
+   "where": "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\"",
+   "msg": "844px tall; one screen under the nav is 1067px",
+   "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-short"
+   ],
+   "wheres": [
+    "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\"",
+   "msg": "framed, 74px of #app-frame section.section \"Your library, one windowThe save\" shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\""
+   ]
+  },
+  {
+   "check": "sparse",
+   "where": "#marquee section.marquee-row.mo-mq \"Prompts in use across the librar\"",
+   "msg": "its content fills 20% of its screen; merge it or give it its visual (0.55 is the aim)",
+   "fix": "fill the section or make it a screen shorter",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "sparse"
+   ],
+   "wheres": [
+    "#marquee section.marquee-row.mo-mq \"Prompts in use across the librar\""
+   ]
+  },
+  {
+   "check": "hero-fold",
+   "where": "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\"",
+   "msg": "ends at y 844, above the fold (1067)",
+   "fix": "the hero fills the first screen alone, its button inside it",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-fold"
+   ],
+   "wheres": [
+    "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\""
+   ]
+  },
+  {
+   "check": "hero-fold",
+   "where": "#app-frame section.section \"Your library, one windowThe save\"",
+   "msg": "shows on the first screen from y 940",
+   "fix": "the hero fills the first screen alone, its button inside it",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-fold"
+   ],
+   "wheres": [
+    "#app-frame section.section \"Your library, one windowThe save\""
+   ]
+  },
+  {
+   "check": "overflow-x",
+   "where": "page",
+   "msg": "the page scrolls sideways",
+   "fix": "remove what scrolls sideways",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "overflow-x"
+   ],
+   "wheres": [
+    "page"
+   ]
+  },
+  {
+   "check": "hero-maxchars",
+   "where": "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\"",
+   "msg": "with a 47-character h1 (heroes.json maxChars): ends at y 844, above the fold (1067)",
+   "fix": "shorten the h1 or give the hero room for the longest headline",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-maxchars"
+   ],
+   "wheres": [
+    "section.hero.hero--collage section.hero.hero--collage \"Your prompts, saved and ready to\""
+   ]
+  },
+  {
+   "check": "hero-maxchars",
+   "where": "#app-frame section.section \"Your library, one windowThe save\"",
+   "msg": "with a 47-character h1 (heroes.json maxChars): shows on the first screen from y 940",
+   "fix": "shorten the h1 or give the hero room for the longest headline",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-maxchars"
+   ],
+   "wheres": [
+    "#app-frame section.section \"Your library, one windowThe save\""
+   ]
+  },
+  {
+   "check": "hero-maxchars",
+   "where": "page",
+   "msg": "with a 47-character h1 the page scrolls sideways",
+   "fix": "shorten the h1 or give the hero room for the longest headline",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-maxchars"
+   ],
+   "wheres": [
+    "page"
+   ]
+  }
+ ],
+ "waived": [],
+ "warnCount": 21,
+ "at": "2026-11-16T15:48:32.135Z"
+}
