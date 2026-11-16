@@ -28,14 +28,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="/assets/backgrounds/backgrounds.css" />
         <link rel="stylesheet" href="/assets/layout/layout.css" />
         <link rel="stylesheet" href="/assets/icons/icon.css" />
-      </head>
-      <body className="mo-js">
-        {children}
         <script
           dangerouslySetInnerHTML={{
             __html: `document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)`,
           }}
         />
+      </head>
+      <body className="mo-js">
+        {children}
         <script src="/assets/backgrounds/backgrounds.js" />
         <script type="module" src="/assets/system.js" />
         <script type="module" src="/assets/motion/motion.js" />

@@ -830,6 +830,16 @@ body {
   display: grid;
   gap: var(--s-6, 32px);
 }
+.grid--top {
+  align-items: start;
+}
+.fill {
+  height: 100%;
+}
+.frame--fill {
+  height: 100%;
+  width: 100%;
+}
 .card {
   display: flex;
   flex-direction: column;
