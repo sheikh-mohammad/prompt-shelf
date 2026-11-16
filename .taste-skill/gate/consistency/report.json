@@ -1,7 +1,7 @@
 {
  "page": "G:\\sheikh\\prompt-shelf\\apps\\web\\out\\index.html",
  "url": "http://127.0.0.1:5200/index.html",
- "at": "2026-11-16T15:56:46.566Z",
+ "at": "2026-11-16T16:02:13.714Z",
  "out": "G:\\sheikh\\prompt-shelf\\.taste-skill\\gate\\consistency",
  "widths": [
   {
@@ -45,7 +45,7 @@
      "sev": "FAIL",
      "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1)",
      "text": "Blog post opener · 24 uses",
-     "msg": "cut 17px by the left edge of the screen",
+     "msg": "cut 22px by the left edge of the screen",
      "stop": 6,
      "crop": "1440-29-cut-text.jpg",
      "fix": "give the text room: no overflow clipping a line, no line past its box"
@@ -621,7 +621,7 @@
      "sev": "FAIL",
      "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1)",
      "text": "Blog post opener · 24 uses",
-     "msg": "\"Blog post opener · 24 uses\" runs -167--4px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
+     "msg": "\"Blog post opener · 24 uses\" runs -168--4px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
      "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
      "rule": "SR-6 T2-containment"
     },
@@ -648,7 +648,7 @@
      "sev": "FAIL",
      "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1)",
      "text": "Blog post opener · 24 uses",
-     "msg": "1 text block starts on a left line at x -167, -247px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+     "msg": "1 text block starts on a left line at x -168, -248px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
      "fix": "start the text on the container's left, or on the one split line every split shares",
      "rule": "SR-6 T3-left-lines"
     },
@@ -741,21 +741,11 @@
     {
      "check": "cut-text",
      "sev": "FAIL",
-     "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1)",
-     "text": "Blog post opener · 24 uses",
-     "msg": "cut 26px by the left edge of the screen",
+     "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(2)",
+     "text": "Code review summary · 12 uses",
+     "msg": "cut 42px by the right edge of the screen (and 1 more like it: \"Photographs via kit libr\")",
      "stop": 1,
      "crop": "390-08-cut-text.jpg",
-     "fix": "give the text room: no overflow clipping a line, no line past its box"
-    },
-    {
-     "check": "cut-text",
-     "sev": "FAIL",
-     "sel": "div.wrap > div.closing__links > div.footer__legal > a.credits",
-     "text": "Photographs via kit library stand-ins",
-     "msg": "cut 103px by the right edge of the screen",
-     "stop": 2,
-     "crop": "390-13-cut-text.jpg",
      "fix": "give the text room: no overflow clipping a line, no line past its box"
     },
     {
@@ -775,7 +765,7 @@
      "text": "Questions about Prompt Shelf",
      "msg": "the closing section is only text: no picture, icon, mock or effect in it",
      "stop": 2,
-     "crop": "390-14-text-only.jpg",
+     "crop": "390-13-text-only.jpg",
      "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground"
     },
     {
@@ -785,7 +775,7 @@
      "text": "Terms",
      "stop": 2,
      "msg": "left edge at 210.5px, 9.5px off a common edge of its section at 201px (3 elements, like a)",
-     "crop": "390-15-off-grid.jpg",
+     "crop": "390-14-off-grid.jpg",
      "fix": "move it onto the page margin, or the column edge its section uses"
     },
     {
@@ -815,7 +805,7 @@
      "text": "",
      "stop": 2,
      "msg": "1177px between these sections, +125% against the median 522px",
-     "crop": "390-16-section-gaps.jpg",
+     "crop": "390-15-section-gaps.jpg",
      "fix": "use one gap between sections (all within 25% of each other)"
     },
     {
@@ -827,7 +817,7 @@
      "msg": "the first section is 844px tall (0.25 screens at 390x844), shorter than the screen: the first screen shows 788px of it and 1688px of the next section, its heading \"Your library, one window\" on screen",
      "fix": "make the hero exactly one screen (height: 100svh) with its content between the nav and 24px above the fold",
      "stop": 3,
-     "crop": "390-19-section-tile.jpg"
+     "crop": "390-18-section-tile.jpg"
     },
     {
      "check": "section-tile",
@@ -837,7 +827,7 @@
      "shows": "section#faq",
      "msg": "the section is 1688px tall (0.50 screens at 390x844), shorter than the screen: its tile (the screen from its top) shows 1632px of it and 1688px of the next section, its heading \"Questions about Prompt Shelf\" on screen",
      "stop": 6,
-     "crop": "390-22-section-tile.jpg",
+     "crop": "390-21-section-tile.jpg",
      "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb"
     },
     {
@@ -848,7 +838,7 @@
      "shows": "footer#contact",
      "msg": "the section is 1688px tall (0.50 screens at 390x844), shorter than the screen: its tile, held at the page's end (scroll 5092px) shows 1688px of it and 844px of the next section, its heading \"Create your first prompt\" on screen",
      "stop": 7,
-     "crop": "390-23-section-tile.jpg",
+     "crop": "390-22-section-tile.jpg",
      "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb"
     },
     {
@@ -859,7 +849,7 @@
      "shows": "section#faq",
      "msg": "the section is 844px tall (0.25 screens at 390x844), shorter than the screen: its tile, held at the page's end (scroll 5092px) shows 844px of it and 1688px of the section above, its heading \"Questions about Prompt Shelf\" on screen",
      "stop": 8,
-     "crop": "390-24-section-tile.jpg",
+     "crop": "390-23-section-tile.jpg",
      "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb"
     },
     {
@@ -879,7 +869,7 @@
      "text": "Questions about Prompt Shelf",
      "msg": "66% of the section is empty: 1024px under its last (div.faq__item:nth-of-type(3)), in its 1544px of rows (WARN over 35%, FAIL over 50%)",
      "stop": 2,
-     "crop": "390-17-empty-area.jpg",
+     "crop": "390-16-empty-area.jpg",
      "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)"
     },
     {
@@ -898,7 +888,7 @@
      "text": "Can I share prompts publicly? Yes. Every prompt ",
      "msg": "3 cards hold only text: no picture, icon, UI fragment or effect in any of them",
      "stop": 2,
-     "crop": "390-18-card-visual.jpg",
+     "crop": "390-17-card-visual.jpg",
      "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons"
     },
     {
@@ -999,7 +989,7 @@
   ]
  },
  "counts": {
-  "FAIL": 58,
+  "FAIL": 57,
   "WARN": 38
  },
  "checks": {

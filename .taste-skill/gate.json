@@ -1,34 +1,16 @@
 {
- "start": "2026-11-16T15:32:14.216Z",
- "round": 3,
+ "start": "2026-11-16T16:00:58.540Z",
+ "round": 1,
  "idle": 0,
  "errors": 0,
- "status": "open",
+ "status": "fail",
  "history": [
   {
-   "at": "2026-11-16T15:48:32.134Z",
+   "at": "2026-11-16T16:05:59.595Z",
    "mode": "manual",
    "status": "fail",
    "fails": 71,
    "round": 1,
-   "reused": false,
-   "stopHookActive": false
-  },
-  {
-   "at": "2026-11-16T15:54:58.243Z",
-   "mode": "manual",
-   "status": "fail",
-   "fails": 65,
-   "round": 2,
-   "reused": false,
-   "stopHookActive": false
-  },
-  {
-   "at": "2026-11-16T16:00:32.975Z",
-   "mode": "manual",
-   "status": "open",
-   "fails": 71,
-   "round": 3,
    "reused": false,
    "stopHookActive": false
   }
@@ -36,20 +18,21 @@
  "max": 3,
  "marker": {
   "page": "apps/web/out/index.html",
-  "dir": "G:\\sheikh\\prompt-shelf",
-  "kind": "software",
-  "start": "2026-11-16T15:32:14.216Z",
-  "by": "start.mjs",
   "url": null,
+  "root": null,
+  "kind": "software",
   "category": "prompt library",
-  "primary": "Create prompt"
+  "primary": "Create prompt",
+  "rounds": 3,
+  "start": "2026-11-16T16:00:58.540Z",
+  "by": "gate.mjs --start"
  },
  "manual": true,
- "roundKey": "8a7c2061110d1cb9:da39a3ee",
+ "roundKey": "6187b0e9a8f79ccf:da39a3ee",
  "roundFree": false,
  "idleFree": false,
  "blockKey": null,
- "fp": "8a7c2061110d1cb9",
+ "fp": "6187b0e9a8f79ccf",
  "page": "apps/web/out/index.html",
  "found": {
   "fails": [
@@ -105,11 +88,10 @@
    {
     "check": "cut-text",
     "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1) \"Blog post opener · 24 uses\"",
-    "msg": "cut 17px by the left edge of the screen",
+    "msg": "cut 22px by the left edge of the screen",
     "fix": "give the text room: no overflow clipping a line, no line past its box",
     "widths": [
-     1440,
-     390
+     1440
     ],
     "from": "consistency",
     "ids": [
@@ -549,7 +531,7 @@
    {
     "check": "container-edges",
     "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1) \"Blog post opener · 24 uses\"",
-    "msg": "\"Blog post opener · 24 uses\" runs -167--4px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
+    "msg": "\"Blog post opener · 24 uses\" runs -168--4px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
     "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
     "widths": [
      1440
@@ -692,8 +674,8 @@
    },
    {
     "check": "cut-text",
-    "where": "div.wrap > div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\"",
-    "msg": "cut 103px by the right edge of the screen",
+    "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(2) \"Code review summary · 12 uses\"",
+    "msg": "cut 42px by the right edge of the screen (and 1 more like it: \"Photographs via kit libr\")",
     "fix": "give the text room: no overflow clipping a line, no line past its box",
     "widths": [
      390
@@ -703,7 +685,7 @@
      "cut-text"
     ],
     "wheres": [
-     "div.wrap > div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\""
+     "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(2) \"Code review summary · 12 uses\""
     ]
    },
    {
@@ -1558,7 +1540,7 @@
   ],
   "crashed": [],
   "seconds": {
-   "consistency": 222,
+   "consistency": 221,
    "layout": 5
   }
  },
@@ -1615,11 +1597,10 @@
   {
    "check": "cut-text",
    "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1) \"Blog post opener · 24 uses\"",
-   "msg": "cut 17px by the left edge of the screen",
+   "msg": "cut 22px by the left edge of the screen",
    "fix": "give the text room: no overflow clipping a line, no line past its box",
    "widths": [
-    1440,
-    390
+    1440
    ],
    "from": "consistency",
    "ids": [
@@ -2059,7 +2040,7 @@
   {
    "check": "container-edges",
    "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1) \"Blog post opener · 24 uses\"",
-   "msg": "\"Blog post opener · 24 uses\" runs -167--4px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
+   "msg": "\"Blog post opener · 24 uses\" runs -168--4px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
    "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
    "widths": [
     1440
@@ -2202,8 +2183,8 @@
   },
   {
    "check": "cut-text",
-   "where": "div.wrap > div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\"",
-   "msg": "cut 103px by the right edge of the screen",
+   "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(2) \"Code review summary · 12 uses\"",
+   "msg": "cut 42px by the right edge of the screen (and 1 more like it: \"Photographs via kit libr\")",
    "fix": "give the text room: no overflow clipping a line, no line past its box",
    "widths": [
     390
@@ -2213,7 +2194,7 @@
     "cut-text"
    ],
    "wheres": [
-    "div.wrap > div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\""
+    "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(2) \"Code review summary · 12 uses\""
    ]
   },
   {
@@ -2723,6 +2704,5 @@
  ],
  "waived": [],
  "warnCount": 34,
- "at": "2026-11-16T16:00:32.976Z",
- "openTold": true
+ "at": "2026-11-16T16:05:59.597Z"
 }
