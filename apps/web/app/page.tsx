@@ -127,114 +127,121 @@ export default function Home() {
                 <p className="hero__proof">Thousands of prompts saved across collections.</p>
               </div>
               <div className="hero-visual">
-                <div className="d-win" aria-hidden="true">
-                  <div className="d-win__bar">
-                    <span className="d-win__crumb">
-                      Prompt Shelf <span className="d-win__crumb">/</span> <b>Saved</b>
-                    </span>
-                    <span className="ui-spacer"></span>
-                    <div className="ui-win__search" aria-hidden="true">
-                      <svg className="ui-icon" viewBox="0 0 16 16">
-                        <circle cx="7" cy="7" r="4.5" />
-                        <path d="m10.5 10.5 3 3" />
-                      </svg>
-                      <span className="ui-win__ph">Search</span>
-                      <span className="ui-kbd">/</span>
+                  <Image
+                    src="/assets/photos/img/m11317510-1200.webp"
+                    alt="Prompt Shelf editor with saved prompts in collections"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 628px"
+                    priority
+                  />
+                  <div className="d-win-overlay" aria-hidden="true">
+                    <div className="d-win__bar">
+                      <span className="d-win__crumb">
+                        Prompt Shelf <span className="d-win__crumb">/</span> <b>Saved</b>
+                      </span>
+                      <span className="ui-spacer"></span>
+                      <div className="ui-win__search" aria-hidden="true">
+                        <svg className="ui-icon" viewBox="0 0 16 16">
+                          <circle cx="7" cy="7" r="4.5" />
+                          <path d="m10.5 10.5 3 3" />
+                        </svg>
+                        <span className="ui-win__ph">Search</span>
+                        <span className="ui-kbd">/</span>
+                      </div>
+                    </div>
+                    <div className="d-win__body">
+                      <div className="d-side">
+                        <span className="is-on"><i></i> All</span>
+                        <span><i></i> Collections</span>
+                        <span><i></i> Favourites</span>
+                        <span><i></i> Public</span>
+                        <span><i></i> Private</span>
+                        <span className="d-side__label">Views</span>
+                        <span className="ui-win__hash"># Writing</span>
+                        <span className="ui-win__hash"># Code</span>
+                        <span className="ui-win__hash"># Analysis</span>
+                      </div>
+                      <div className="d-main">
+                        <div className="d-main__head">
+                          <h4>Saved prompts</h4>
+                          <span className="d-btn">New prompt</span>
+                        </div>
+                        <div className="d-tabs">
+                          <span className="is-on">All 412</span>
+                          <span>Collections 28</span>
+                          <span>Favourites 64</span>
+                        </div>
+                        <div className="d-rows">
+                          <div className="d-row">
+                            <div>
+                              <b>Blog post opener</b>
+                              <br />
+                              <small>Writing · 4 variables</small>
+                            </div>
+                            <span className="num">24 uses</span>
+                            <span className="d-chip d-chip--public">Public</span>
+                          </div>
+                          <div className="d-row">
+                            <div>
+                              <b>Code review summary</b>
+                              <br />
+                              <small>Code · 2 variables</small>
+                            </div>
+                            <span className="num">12</span>
+                            <span className="d-chip d-chip--private">Private</span>
+                          </div>
+                          <div className="d-row">
+                            <div>
+                              <b>Data analysis brief</b>
+                              <br />
+                              <small>Analysis · 6 variables</small>
+                            </div>
+                            <span className="num">48</span>
+                            <span className="d-chip d-chip--draft">Draft</span>
+                          </div>
+                          <div className="d-row">
+                            <div>
+                              <b>Email to customer</b>
+                              <br />
+                              <small>Writing · 3 variables</small>
+                            </div>
+                            <span className="num">6</span>
+                            <span className="d-chip d-chip--public">Public</span>
+                          </div>
+                          <div className="d-row">
+                            <div>
+                              <b>Meeting notes to tasks</b>
+                              <br />
+                              <small>Writing · 1 variable</small>
+                            </div>
+                            <span className="num">31</span>
+                            <span className="d-chip d-chip--private">Private</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="d-win__body">
-                    <div className="d-side">
-                      <span className="is-on"><i></i> All</span>
-                      <span><i></i> Collections</span>
-                      <span><i></i> Favourites</span>
-                      <span><i></i> Public</span>
-                      <span><i></i> Private</span>
-                      <span className="d-side__label">Views</span>
-                      <span className="ui-win__hash"># Writing</span>
-                      <span className="ui-win__hash"># Code</span>
-                      <span className="ui-win__hash"># Analysis</span>
+                  <div className="d-card" aria-hidden="true" data-ly-steps="700">
+                    <div className="d-card__row">
+                      <h5>Open prompt</h5>
+                      <span className="d-chip d-chip--data" data-step data-step-at="4">
+                        Blog post opener
+                      </span>
                     </div>
-                    <div className="d-main">
-                      <div className="d-main__head">
-                        <h4>Saved prompts</h4>
-                        <span className="d-btn">New prompt</span>
-                      </div>
-                      <div className="d-tabs">
-                        <span className="is-on">All 412</span>
-                        <span>Collections 28</span>
-                        <span>Favourites 64</span>
-                      </div>
-                      <div className="d-rows">
-                        <div className="d-row">
-                          <div>
-                            <b>Blog post opener</b>
-                            <br />
-                            <small>Writing · 4 variables</small>
-                          </div>
-                          <span className="num">24 uses</span>
-                          <span className="d-chip d-chip--public">Public</span>
-                        </div>
-                        <div className="d-row">
-                          <div>
-                            <b>Code review summary</b>
-                            <br />
-                            <small>Code · 2 variables</small>
-                          </div>
-                          <span className="num">12</span>
-                          <span className="d-chip d-chip--private">Private</span>
-                        </div>
-                        <div className="d-row">
-                          <div>
-                            <b>Data analysis brief</b>
-                            <br />
-                            <small>Analysis · 6 variables</small>
-                          </div>
-                          <span className="num">48</span>
-                          <span className="d-chip d-chip--draft">Draft</span>
-                        </div>
-                        <div className="d-row">
-                          <div>
-                            <b>Email to customer</b>
-                            <br />
-                            <small>Writing · 3 variables</small>
-                          </div>
-                          <span className="num">6</span>
-                          <span className="d-chip d-chip--public">Public</span>
-                        </div>
-                        <div className="d-row">
-                          <div>
-                            <b>Meeting notes to tasks</b>
-                            <br />
-                            <small>Writing · 1 variable</small>
-                          </div>
-                          <span className="num">31</span>
-                          <span className="d-chip d-chip--private">Private</span>
-                        </div>
-                      </div>
+                    <div className="d-note__line" data-step>
+                      <i>✓</i>
+                      <span><b>412 prompts</b> saved across 28 collections</span>
+                    </div>
+                    <div className="d-note__line" data-step>
+                      <i>✓</i>
+                      <span>Favourited 64 times this week</span>
+                    </div>
+                    <div className="d-note__line" data-step>
+                      <i>✓</i>
+                      <span>Public prompts reused 1,240 times</span>
                     </div>
                   </div>
                 </div>
-                <div className="d-card" aria-hidden="true" data-ly-steps="700">
-                  <div className="d-card__row">
-                    <h5>Open prompt</h5>
-                    <span className="d-chip d-chip--data" data-step data-step-at="4">
-                      Blog post opener
-                    </span>
-                  </div>
-                  <div className="d-note__line" data-step>
-                    <i>✓</i>
-                    <span><b>412 prompts</b> saved across 28 collections</span>
-                  </div>
-                  <div className="d-note__line" data-step>
-                    <i>✓</i>
-                    <span>Favourited 64 times this week</span>
-                  </div>
-                  <div className="d-note__line" data-step>
-                    <i>✓</i>
-                    <span>Public prompts reused 1,240 times</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>

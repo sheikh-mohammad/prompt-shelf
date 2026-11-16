@@ -30,7 +30,7 @@ body {
   font-weight: 400;
 }
 body {
-  min-height: 100svh;
+  min-height: 100vh;
 }
 
 .skip-link {
@@ -64,7 +64,7 @@ body {
 
 .section {
   position: relative;
-  height: calc(var(--h, 1) * 100svh);
+  height: calc(var(--h, 1) * 100vh);
   scroll-padding-top: 0;
   scroll-behavior: auto;
 }
@@ -313,7 +313,7 @@ body {
 /* Hero */
 .hero {
   position: relative;
-  height: 100svh;
+  height: 100vh;
   display: flex;
   align-items: center;
   padding-top: calc(var(--nav, 72px) + var(--hgap, 40px));
@@ -356,6 +356,21 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  position: absolute;
+  inset: 0;
+}
+.hero-visual .d-win-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  pointer-events: none;
+}
+.hero-visual .d-win-overlay .d-win__bar,
+.hero-visual .d-win-overlay .d-win__body,
+.hero-visual .d-win-overlay .d-card {
+  pointer-events: auto;
 }
 
 /* Collage visual pieces */
@@ -932,7 +947,7 @@ body {
 /* Footer */
 .footer.closing {
   position: relative;
-  height: calc(var(--h, 1) * 100svh);
+  height: calc(var(--h, 1) * 100vh);
   background: var(--p-bg);
   display: flex;
   flex-direction: column;

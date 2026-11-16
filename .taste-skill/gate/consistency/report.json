@@ -1,7 +1,7 @@
 {
  "page": "G:\\sheikh\\prompt-shelf\\apps\\web\\out\\index.html",
  "url": "http://127.0.0.1:5200/index.html",
- "at": "2026-11-16T15:51:02.291Z",
+ "at": "2026-11-16T15:56:46.566Z",
  "out": "G:\\sheikh\\prompt-shelf\\.taste-skill\\gate\\consistency",
  "widths": [
   {
@@ -18,8 +18,18 @@
      "text": "",
      "msg": "section#features and section#marquee run together: -131px between their content, on one ground",
      "stop": 6,
-     "crop": "1440-24-flush.jpg",
+     "crop": "1440-28-flush.jpg",
      "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "spill",
+     "sev": "FAIL",
+     "sel": "div.wrap > div.hero-text > div.hero-visual > div.d-card",
+     "text": "Open prompt Blog post opener ✓ 412 prompts saved",
+     "msg": "runs 61px past the bottom edge of the panel it sits on (div.hero-text > div.hero-visual > div.d-win-overlay > div.d-win__bar)",
+     "stop": 0,
+     "crop": "1440-01-spill.jpg",
+     "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it"
     },
     {
      "check": "off-viewport",
@@ -35,30 +45,10 @@
      "sev": "FAIL",
      "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1)",
      "text": "Blog post opener · 24 uses",
-     "msg": "cut 34px by the left edge of the screen",
+     "msg": "cut 17px by the left edge of the screen",
      "stop": 6,
-     "crop": "1440-25-cut-text.jpg",
+     "crop": "1440-29-cut-text.jpg",
      "fix": "give the text room: no overflow clipping a line, no line past its box"
-    },
-    {
-     "check": "cut-text",
-     "sev": "FAIL",
-     "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(8)",
-     "text": "Data analysis brief · 48 uses",
-     "msg": "cut 159px by the right edge of the screen",
-     "stop": 6,
-     "crop": "1440-26-cut-text.jpg",
-     "fix": "give the text room: no overflow clipping a line, no line past its box"
-    },
-    {
-     "check": "no-visual",
-     "sev": "FAIL",
-     "sel": "main#top > section.hero.hero--collage",
-     "text": "412 prompts saved, ready to reuse",
-     "msg": "no picture, effect or mock in this section; a feature section needs a visual",
-     "stop": 0,
-     "crop": "1440-01-no-visual.jpg",
-     "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
     },
     {
      "check": "no-visual",
@@ -67,7 +57,7 @@
      "text": "Prompts in use across the library",
      "msg": "no picture, effect or mock in this section; a feature section needs a visual",
      "stop": 6,
-     "crop": "1440-27-no-visual.jpg",
+     "crop": "1440-30-no-visual.jpg",
      "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
     },
     {
@@ -77,7 +67,7 @@
      "text": "Questions about Prompt Shelf",
      "msg": "the closing section is only text: no picture, icon, mock or effect in it",
      "stop": 8,
-     "crop": "1440-32-text-only.jpg",
+     "crop": "1440-35-text-only.jpg",
      "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground"
     },
     {
@@ -107,8 +97,28 @@
      "text": "Save, collect, filter",
      "msg": "\"Save, collect, filter\" names no product, part, place or section (4 headings like it; at most one brand line per page) (and 3 more like it: \"Build collections\", \"Star favourites\", \"Public and private\")",
      "stop": 3,
-     "crop": "1440-21-copy-headings.jpg",
+     "crop": "1440-25-copy-headings.jpg",
      "fix": "name the thing in every heading: the product, a part, the place or a section noun"
+    },
+    {
+     "check": "contrast",
+     "sev": "FAIL",
+     "sel": "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(2)",
+     "text": "Collections",
+     "stop": 0,
+     "msg": "body text over a picture reads at 1.6:1 at its worst tenth (needs 4.5:1), on a busy ground (and 2 more like it: \"New prompt\", \"All 412\")",
+     "crop": "1440-04-contrast.jpg",
+     "fix": "put the text on a calm part of the picture, or on a solid panel"
+    },
+    {
+     "check": "contrast",
+     "sev": "FAIL",
+     "sel": "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(3)",
+     "text": "Favourites",
+     "stop": 0,
+     "msg": "body text over a picture reads at 1.1:1 at its worst tenth (needs 4.5:1) (and 2 more like it: \"Collections 28\", \"Favourites 64\")",
+     "crop": "1440-05-contrast.jpg",
+     "fix": "put the text on a calm part of the picture, or on a solid panel"
     },
     {
      "check": "section-gaps",
@@ -117,8 +127,18 @@
      "text": "",
      "stop": 1,
      "msg": "180px between these sections, -85% against the median 1180px",
-     "crop": "1440-16-section-gaps.jpg",
+     "crop": "1440-20-section-gaps.jpg",
      "fix": "use one gap between sections (all within 25% of each other)"
+    },
+    {
+     "check": "hole",
+     "sev": "FAIL",
+     "sel": "main#top > section.hero.hero--collage",
+     "text": "412 prompts saved, ready to reuse",
+     "msg": "an empty hole 900x384px inside the section (43% of the screen's height), with content above and below it",
+     "stop": 0,
+     "crop": "1440-06-hole.jpg",
+     "fix": "close the empty space: move the content together, or give the space the visual it lacks"
     },
     {
      "check": "effect-kind",
@@ -132,11 +152,21 @@
     {
      "check": "empty-area",
      "sev": "FAIL",
+     "sel": "main#top > section.hero.hero--collage",
+     "text": "412 prompts saved, ready to reuse",
+     "msg": "53% of the section is empty: 128px of empty rows between its content, 36% beside content that covers under half the container, in its 728px of rows (WARN over 35%, FAIL over 50%)",
+     "stop": 0,
+     "crop": "1440-07-empty-area.jpg",
+     "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)"
+    },
+    {
+     "check": "empty-area",
+     "sev": "FAIL",
      "sel": "section#app-frame",
      "text": "Your library, one window",
      "msg": "52% of the section is empty: 848px under its last (div.app), in its 1620px of rows (WARN over 35%, FAIL over 50%)",
      "stop": 2,
-     "crop": "1440-20-empty-area.jpg",
+     "crop": "1440-24-empty-area.jpg",
      "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)"
     },
     {
@@ -146,7 +176,7 @@
      "text": "Prompts in use across the library",
      "msg": "89% of the section is empty: 16px of empty rows between its content, 1440px under its last (span.marquee__item:nth-of-type(1)), in its 1620px of rows (WARN over 35%, FAIL over 50%)",
      "stop": 7,
-     "crop": "1440-31-empty-area.jpg",
+     "crop": "1440-34-empty-area.jpg",
      "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)"
     },
     {
@@ -156,7 +186,7 @@
      "text": "Questions about Prompt Shelf",
      "msg": "67% of the section is empty: 1088px under its last (div.faq__item:nth-of-type(3)), in its 1620px of rows (WARN over 35%, FAIL over 50%)",
      "stop": 9,
-     "crop": "1440-34-empty-area.jpg",
+     "crop": "1440-37-empty-area.jpg",
      "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)"
     },
     {
@@ -175,8 +205,18 @@
      "text": "Audience",
      "msg": "shortened with an ellipsis (and 1 more like it: \"Length\")",
      "stop": 1,
-     "crop": "1440-17-cut-text.jpg",
+     "crop": "1440-21-cut-text.jpg",
      "fix": "give the text room: no overflow clipping a line, no line past its box"
+    },
+    {
+     "check": "no-visual",
+     "sev": "WARN",
+     "sel": "main#top > section.hero.hero--collage",
+     "text": "412 prompts saved, ready to reuse",
+     "msg": "pictures, effects and mocks cover 20% of this section; a feature section needs a visual (about 25% or more)",
+     "stop": 0,
+     "crop": "1440-08-no-visual.jpg",
+     "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
     },
     {
      "check": "card-visual",
@@ -185,7 +225,7 @@
      "text": "Can I share prompts publicly? Yes. Every prompt ",
      "msg": "3 cards hold only text: no picture, icon, UI fragment or effect in any of them",
      "stop": 8,
-     "crop": "1440-33-card-visual.jpg",
+     "crop": "1440-36-card-visual.jpg",
      "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons"
     },
     {
@@ -195,7 +235,7 @@
      "text": "Save, collect, filter",
      "msg": "a section over 1.5 screens long with no link or button in it",
      "stop": 4,
-     "crop": "1440-22-cta.jpg",
+     "crop": "1440-26-cta.jpg",
      "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
     },
     {
@@ -205,7 +245,7 @@
      "text": "Prompts in use across the library",
      "msg": "a section over 1.5 screens long with no link or button in it",
      "stop": 6,
-     "crop": "1440-28-cta.jpg",
+     "crop": "1440-31-cta.jpg",
      "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
     },
     {
@@ -215,7 +255,7 @@
      "text": "Prompts in use across the library",
      "stop": 5,
      "msg": "large text over a picture reads at 2.1:1 at its worst tenth (needs 3:1), on a busy ground",
-     "crop": "1440-23-contrast.jpg",
+     "crop": "1440-27-contrast.jpg",
      "fix": "put the text on a calm part of the picture, or on a solid panel"
     },
     {
@@ -226,7 +266,7 @@
      "stop": 1,
      "msg": "2 lines of text in drawn mocks read under 4.5:1 (1 colour pair), the worst \"Open\" in #ffffff on #f4f4f4 at 1.1:1",
      "fix": "lift the mocks' muted text (labels, meta, initials) to 4.5:1 on their own panel, or set it larger",
-     "crop": "1440-18-text-contrast.jpg"
+     "crop": "1440-22-text-contrast.jpg"
     },
     {
      "check": "section-gaps",
@@ -235,7 +275,7 @@
      "text": "",
      "stop": 6,
      "msg": "the sections overlap by 131px",
-     "crop": "1440-29-section-gaps.jpg",
+     "crop": "1440-32-section-gaps.jpg",
      "fix": "use one gap between sections (all within 25% of each other)"
     },
     {
@@ -248,23 +288,13 @@
      "fix": "use one gap between sections (all within 25% of each other)"
     },
     {
-     "check": "hole",
-     "sev": "WARN",
-     "sel": "main#top > section.hero.hero--collage",
-     "text": "412 prompts saved, ready to reuse",
-     "msg": "an empty hole 900x228px inside the section (25% of the screen's height), with content above and below it",
-     "stop": 0,
-     "crop": "1440-04-hole.jpg",
-     "fix": "close the empty space: move the content together, or give the space the visual it lacks"
-    },
-    {
      "check": "links",
      "sev": "WARN",
      "sel": "header.nav > div.wrap.nav__bar > nav.nav__links > a.nav__link:nth-of-type(3)",
      "text": "Plans",
      "msg": "\"Plans\" goes to #contact, in the footer",
      "stop": 0,
-     "crop": "1440-05-links.jpg",
+     "crop": "1440-09-links.jpg",
      "fix": "point every link at a real section, page or file"
     },
     {
@@ -274,7 +304,7 @@
      "text": "Log in",
      "msg": "\"Log in\" goes to #contact, in the footer",
      "stop": 0,
-     "crop": "1440-06-links.jpg",
+     "crop": "1440-10-links.jpg",
      "fix": "point every link at a real section, page or file"
     },
     {
@@ -284,7 +314,7 @@
      "text": "About",
      "msg": "\"About\" goes to #contact, the block it already sits in",
      "stop": 11,
-     "crop": "1440-35-links.jpg",
+     "crop": "1440-38-links.jpg",
      "fix": "point every link at a real section, page or file"
     },
     {
@@ -294,7 +324,7 @@
      "text": "Privacy",
      "msg": "\"Privacy\" goes to privacy.html, which does not exist here",
      "stop": 11,
-     "crop": "1440-36-links.jpg",
+     "crop": "1440-39-links.jpg",
      "fix": "point every link at a real section, page or file"
     },
     {
@@ -304,7 +334,7 @@
      "text": "Terms",
      "msg": "\"Terms\" goes to terms.html, which does not exist here",
      "stop": 11,
-     "crop": "1440-37-links.jpg",
+     "crop": "1440-40-links.jpg",
      "fix": "point every link at a real section, page or file"
     },
     {
@@ -314,7 +344,7 @@
      "text": "Photographs via kit library stand-ins",
      "msg": "\"Photographs via kit library stand-ins\" goes to credits.html, which does not exist here",
      "stop": 11,
-     "crop": "1440-38-links.jpg",
+     "crop": "1440-41-links.jpg",
      "fix": "point every link at a real section, page or file"
     },
     {
@@ -324,7 +354,7 @@
      "text": "Save",
      "msg": "\"Save\" opens a section headed \"Your library, one window\"",
      "stop": 0,
-     "crop": "1440-07-nav-labels.jpg",
+     "crop": "1440-11-nav-labels.jpg",
      "fix": "name each nav link after the heading of the section it opens"
     },
     {
@@ -361,7 +391,7 @@
      "text": "Create",
      "msg": "\"Create\" opens a section headed \"Your library, one window\"",
      "stop": 0,
-     "crop": "1440-08-nav-labels.jpg",
+     "crop": "1440-12-nav-labels.jpg",
      "fix": "name each nav link after the heading of the section it opens"
     },
     {
@@ -371,7 +401,7 @@
      "text": "Library",
      "msg": "\"Library\" opens a section headed \"Save, collect, filter\"",
      "stop": 0,
-     "crop": "1440-09-nav-labels.jpg",
+     "crop": "1440-13-nav-labels.jpg",
      "fix": "name each nav link after the heading of the section it opens"
     },
     {
@@ -381,7 +411,7 @@
      "text": "Plans",
      "msg": "\"Plans\" opens a section headed \"Create your first prompt\"",
      "stop": 0,
-     "crop": "1440-10-nav-labels.jpg",
+     "crop": "1440-14-nav-labels.jpg",
      "fix": "name each nav link after the heading of the section it opens"
     },
     {
@@ -391,7 +421,7 @@
      "text": "Help",
      "msg": "\"Help\" opens a section headed \"Questions about Prompt Shelf\"",
      "stop": 0,
-     "crop": "1440-11-nav-labels.jpg",
+     "crop": "1440-15-nav-labels.jpg",
      "fix": "name each nav link after the heading of the section it opens"
     },
     {
@@ -401,18 +431,8 @@
      "text": "Log in",
      "msg": "\"Log in\" opens a section headed \"Create your first prompt\"",
      "stop": 0,
-     "crop": "1440-12-nav-labels.jpg",
+     "crop": "1440-16-nav-labels.jpg",
      "fix": "name each nav link after the heading of the section it opens"
-    },
-    {
-     "check": "fade-cut",
-     "sev": "WARN",
-     "sel": "div.d-win__body > div.d-main > div.d-tabs > span:nth-of-type(1)",
-     "text": "All 412",
-     "stop": 0,
-     "msg": "2 lines of div.d-win fade out under its edge (\"All 412\", \"Writing · 4 variables\"): drawn at a fraction of #111111 on #f4f4f4, half-erased",
-     "crop": "1440-13-fade-cut.jpg",
-     "fix": "fit the mock's rows inside its panel (fewer rows, a taller panel), or end the fade below the last whole row: no row half-erased"
     },
     {
      "check": "nav-current",
@@ -421,7 +441,7 @@
      "text": "",
      "stop": 1,
      "msg": "the nav stays on screen with 6 links to the page's sections, but never marks the one you are in (no link changes as the page scrolls)",
-     "crop": "1440-19-nav-current.jpg",
+     "crop": "1440-23-nav-current.jpg",
      "fix": "mark the link of the section on screen (a colour, a weight or a line under it) as the visitor scrolls"
     },
     {
@@ -431,8 +451,18 @@
      "text": "Browse library",
      "stop": 0,
      "msg": "the button \"Browse library\" (#e9e9e9) stands only 1.21:1 off the ground around it: it reads as part of the ground, or as switched off",
-     "crop": "1440-14-button-contrast.jpg",
+     "crop": "1440-17-button-contrast.jpg",
      "fix": "give the button a fill that stands at least 1.5:1 off what is around it, or an outline in the ink"
+    },
+    {
+     "check": "visual-caption",
+     "sev": "WARN",
+     "sel": "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(4)",
+     "text": "Public",
+     "msg": "a muted 13px line of 1 row sits 13px under the picture m11317510-1200.webp: it reads as a caption: \"Public\"; no caption or description under any image, render or visual (house rule)",
+     "stop": 0,
+     "crop": "1440-18-visual-caption.jpg",
+     "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line"
     },
     {
      "check": "visual-caption",
@@ -441,7 +471,7 @@
      "text": "Blog post opener · 24 uses",
      "msg": "a muted 14px line of 1 row sits 8px under the picture m147143894-1200.webp: it reads as a caption: \"Blog post opener · 24 uses\"; no caption or description under any image, render or visual (house rule)",
      "stop": 6,
-     "crop": "1440-30-visual-caption.jpg",
+     "crop": "1440-33-visual-caption.jpg",
      "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line"
     },
     {
@@ -452,7 +482,7 @@
      "msg": "the hero does not enter on load: no head line setting html.m-enter (motion.md, The hero's entrance)",
      "fix": "put data-enter on the hero <section> and keep the head line from starter.html that sets html.m-enter",
      "stop": 0,
-     "crop": "1440-15-hero-enter.jpg"
+     "crop": "1440-19-hero-enter.jpg"
     },
     {
      "check": "heading-order",
@@ -461,7 +491,7 @@
      "text": "Product",
      "msg": "\"Product\" is an h4 after an h2: a level is skipped (in the header or footer)",
      "stop": 11,
-     "crop": "1440-39-heading-order.jpg",
+     "crop": "1440-42-heading-order.jpg",
      "fix": "step down one level at a time (h1, h2, h3): change the tag, not the look; a footer's column heads are h3"
     },
     {
@@ -480,7 +510,7 @@
      "text": "create prompt",
      "stop": 12,
      "msg": "\"create prompt\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
-     "crop": "1440-40-action-repeat.jpg",
+     "crop": "1440-43-action-repeat.jpg",
      "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once"
     },
     {
@@ -591,7 +621,7 @@
      "sev": "FAIL",
      "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1)",
      "text": "Blog post opener · 24 uses",
-     "msg": "\"Blog post opener · 24 uses\" runs -169--6px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
+     "msg": "\"Blog post opener · 24 uses\" runs -167--4px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
      "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
      "rule": "SR-6 T2-containment"
     },
@@ -600,7 +630,7 @@
      "sev": "FAIL",
      "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(8)",
      "text": "Data analysis brief · 48 uses",
-     "msg": "\"Data analysis brief · 48 uses\" runs 1295-1464px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
+     "msg": "\"Data analysis brief · 48 uses\" runs 1297-1466px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
      "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
      "rule": "SR-6 T2-containment"
     },
@@ -609,7 +639,7 @@
      "sev": "FAIL",
      "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(2)",
      "text": "Code review summary · 12 uses",
-     "msg": "\"Code review summary · 12 uses\" runs 26-220px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
+     "msg": "\"Code review summary · 12 uses\" runs 28-221px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
      "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
      "rule": "SR-6 T2-containment"
     },
@@ -618,7 +648,16 @@
      "sev": "FAIL",
      "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1)",
      "text": "Blog post opener · 24 uses",
-     "msg": "1 text block starts on a left line at x -169, -249px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+     "msg": "1 text block starts on a left line at x -167, -247px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.d-win__body > div.d-main > div.d-tabs > span:nth-of-type(1)",
+     "text": "All 412",
+     "msg": "1 text block starts on a left line at x 314, 234px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
      "fix": "start the text on the container's left, or on the one split line every split shares",
      "rule": "SR-6 T3-left-lines"
     },
@@ -627,7 +666,7 @@
      "sev": "FAIL",
      "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(8)",
      "text": "Data analysis brief · 48 uses",
-     "msg": "the page scrolls sideways (1737px wide on a 1440px screen): \"Data analysis brief · 48 uses\" ends at 1464px (SR-6)",
+     "msg": "the page scrolls sideways (1737px wide on a 1440px screen): \"Data analysis brief · 48 uses\" ends at 1466px (SR-6)",
      "fix": "take the sideways scroll away: nothing wider than the screen (overflow-x: clip on the part that spills)",
      "rule": "SR-6 T5-overflow"
     },
@@ -646,7 +685,7 @@
      "sev": "FAIL",
      "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(8)",
      "text": "Data analysis brief · 48 uses",
-     "msg": "\"Data analysis brief · 48 uses\" ends at 1464px, past the container's right line at 1360px (SR-7)",
+     "msg": "\"Data analysis brief · 48 uses\" ends at 1466px, past the container's right line at 1360px (SR-7)",
      "fix": "end it at the container's right line",
      "rule": "SR-7 T-right"
     },
@@ -692,21 +731,31 @@
     {
      "check": "cut-text",
      "sev": "FAIL",
-     "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1)",
-     "text": "Blog post opener · 24 uses",
-     "msg": "cut 115px by the left edge of the screen",
-     "stop": 1,
-     "crop": "390-05-cut-text.jpg",
+     "sel": "div.d-main > div.d-rows > div.d-row:nth-of-type(1) > span.num",
+     "text": "24 uses",
+     "msg": "cut 8px at the bottom by the overflow of section.hero.hero--collage > div.wrap > div.hero-text > div.hero-visual (and 1 more like it: \"Public\")",
+     "stop": 0,
+     "crop": "390-02-cut-text.jpg",
      "fix": "give the text room: no overflow clipping a line, no line past its box"
     },
     {
      "check": "cut-text",
      "sev": "FAIL",
-     "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(3)",
-     "text": "Data analysis brief · 48 uses",
-     "msg": "cut 85px by the right edge of the screen (and 1 more like it: \"Photographs via kit libr\")",
+     "sel": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1)",
+     "text": "Blog post opener · 24 uses",
+     "msg": "cut 26px by the left edge of the screen",
      "stop": 1,
-     "crop": "390-06-cut-text.jpg",
+     "crop": "390-08-cut-text.jpg",
+     "fix": "give the text room: no overflow clipping a line, no line past its box"
+    },
+    {
+     "check": "cut-text",
+     "sev": "FAIL",
+     "sel": "div.wrap > div.closing__links > div.footer__legal > a.credits",
+     "text": "Photographs via kit library stand-ins",
+     "msg": "cut 103px by the right edge of the screen",
+     "stop": 2,
+     "crop": "390-13-cut-text.jpg",
      "fix": "give the text room: no overflow clipping a line, no line past its box"
     },
     {
@@ -716,7 +765,7 @@
      "text": "Prompts in use across the library",
      "msg": "no picture, effect or mock in this section; a feature section needs a visual",
      "stop": 1,
-     "crop": "390-07-no-visual.jpg",
+     "crop": "390-09-no-visual.jpg",
      "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
     },
     {
@@ -726,7 +775,7 @@
      "text": "Questions about Prompt Shelf",
      "msg": "the closing section is only text: no picture, icon, mock or effect in it",
      "stop": 2,
-     "crop": "390-11-text-only.jpg",
+     "crop": "390-14-text-only.jpg",
      "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground"
     },
     {
@@ -736,8 +785,18 @@
      "text": "Terms",
      "stop": 2,
      "msg": "left edge at 210.5px, 9.5px off a common edge of its section at 201px (3 elements, like a)",
-     "crop": "390-12-off-grid.jpg",
+     "crop": "390-15-off-grid.jpg",
      "fix": "move it onto the page margin, or the column edge its section uses"
+    },
+    {
+     "check": "contrast",
+     "sev": "FAIL",
+     "sel": "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(1)",
+     "text": "All",
+     "stop": 0,
+     "msg": "body text over a picture reads at 1.6:1 at its worst tenth (needs 4.5:1), on a busy ground (and 12 more like it: \"Collections\", \"Favourites\", \"Public\", \"Private\", ...)",
+     "crop": "390-03-contrast.jpg",
+     "fix": "put the text on a calm part of the picture, or on a solid panel"
     },
     {
      "check": "section-gaps",
@@ -746,7 +805,7 @@
      "text": "",
      "stop": 1,
      "msg": "1518px between these sections, +191% against the median 522px",
-     "crop": "390-08-section-gaps.jpg",
+     "crop": "390-10-section-gaps.jpg",
      "fix": "use one gap between sections (all within 25% of each other)"
     },
     {
@@ -756,7 +815,7 @@
      "text": "",
      "stop": 2,
      "msg": "1177px between these sections, +125% against the median 522px",
-     "crop": "390-13-section-gaps.jpg",
+     "crop": "390-16-section-gaps.jpg",
      "fix": "use one gap between sections (all within 25% of each other)"
     },
     {
@@ -768,7 +827,7 @@
      "msg": "the first section is 844px tall (0.25 screens at 390x844), shorter than the screen: the first screen shows 788px of it and 1688px of the next section, its heading \"Your library, one window\" on screen",
      "fix": "make the hero exactly one screen (height: 100svh) with its content between the nav and 24px above the fold",
      "stop": 3,
-     "crop": "390-16-section-tile.jpg"
+     "crop": "390-19-section-tile.jpg"
     },
     {
      "check": "section-tile",
@@ -778,7 +837,7 @@
      "shows": "section#faq",
      "msg": "the section is 1688px tall (0.50 screens at 390x844), shorter than the screen: its tile (the screen from its top) shows 1632px of it and 1688px of the next section, its heading \"Questions about Prompt Shelf\" on screen",
      "stop": 6,
-     "crop": "390-19-section-tile.jpg",
+     "crop": "390-22-section-tile.jpg",
      "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb"
     },
     {
@@ -789,7 +848,7 @@
      "shows": "footer#contact",
      "msg": "the section is 1688px tall (0.50 screens at 390x844), shorter than the screen: its tile, held at the page's end (scroll 5092px) shows 1688px of it and 844px of the next section, its heading \"Create your first prompt\" on screen",
      "stop": 7,
-     "crop": "390-20-section-tile.jpg",
+     "crop": "390-23-section-tile.jpg",
      "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb"
     },
     {
@@ -800,7 +859,7 @@
      "shows": "section#faq",
      "msg": "the section is 844px tall (0.25 screens at 390x844), shorter than the screen: its tile, held at the page's end (scroll 5092px) shows 844px of it and 1688px of the section above, its heading \"Questions about Prompt Shelf\" on screen",
      "stop": 8,
-     "crop": "390-21-section-tile.jpg",
+     "crop": "390-24-section-tile.jpg",
      "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb"
     },
     {
@@ -810,7 +869,7 @@
      "text": "Prompts in use across the library",
      "msg": "89% of the section is empty: 16px of empty rows between its content, 1360px under its last (span.marquee__item:nth-of-type(1)), in its 1544px of rows (WARN over 35%, FAIL over 50%)",
      "stop": 1,
-     "crop": "390-09-empty-area.jpg",
+     "crop": "390-11-empty-area.jpg",
      "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)"
     },
     {
@@ -820,7 +879,7 @@
      "text": "Questions about Prompt Shelf",
      "msg": "66% of the section is empty: 1024px under its last (div.faq__item:nth-of-type(3)), in its 1544px of rows (WARN over 35%, FAIL over 50%)",
      "stop": 2,
-     "crop": "390-14-empty-area.jpg",
+     "crop": "390-17-empty-area.jpg",
      "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)"
     },
     {
@@ -839,7 +898,7 @@
      "text": "Can I share prompts publicly? Yes. Every prompt ",
      "msg": "3 cards hold only text: no picture, icon, UI fragment or effect in any of them",
      "stop": 2,
-     "crop": "390-15-card-visual.jpg",
+     "crop": "390-18-card-visual.jpg",
      "fix": "give the cards a visual: an inset panel with a UI fragment, a photograph or real icons"
     },
     {
@@ -850,7 +909,7 @@
      "stop": 0,
      "msg": "2 lines of text in drawn mocks read under 4.5:1 (1 colour pair), the worst \"Open\" in #ffffff on #f4f4f4 at 1.1:1",
      "fix": "lift the mocks' muted text (labels, meta, initials) to 4.5:1 on their own panel, or set it larger",
-     "crop": "390-03-text-contrast.jpg"
+     "crop": "390-05-text-contrast.jpg"
     },
     {
      "check": "section-gaps",
@@ -859,8 +918,18 @@
      "text": "",
      "stop": 1,
      "msg": "231px between these sections, -56% against the median 522px",
-     "crop": "390-10-section-gaps.jpg",
+     "crop": "390-12-section-gaps.jpg",
      "fix": "use one gap between sections (all within 25% of each other)"
+    },
+    {
+     "check": "fade-cut",
+     "sev": "WARN",
+     "sel": "div.hero-visual > div.d-card > div.d-card__row > span.d-chip.d-chip--data",
+     "text": "Blog post opener",
+     "stop": 0,
+     "msg": "a line of div.d-card fades out under its edge (\"Blog post opener\"): drawn at a fraction of #111111 on #f4f4f4, half-erased",
+     "crop": "390-06-fade-cut.jpg",
+     "fix": "fit the mock's rows inside its panel (fewer rows, a taller panel), or end the fade below the last whole row: no row half-erased"
     },
     {
      "check": "button-contrast",
@@ -869,7 +938,7 @@
      "text": "Browse library",
      "stop": 0,
      "msg": "the button \"Browse library\" (#e9e9e9) stands only 1.21:1 off the ground around it: it reads as part of the ground, or as switched off",
-     "crop": "390-04-button-contrast.jpg",
+     "crop": "390-07-button-contrast.jpg",
      "fix": "give the button a fill that stands at least 1.5:1 off what is around it, or an outline in the ink"
     }
    ],
@@ -930,8 +999,8 @@
   ]
  },
  "counts": {
-  "FAIL": 52,
-  "WARN": 37
+  "FAIL": 58,
+  "WARN": 38
  },
  "checks": {
   "assets": "WARN",
@@ -946,7 +1015,7 @@
   "credit-wall": "PASS",
   "nav": "PASS",
   "nav-covers": "PASS",
-  "spill": "PASS",
+  "spill": "FAIL",
   "off-viewport": "FAIL",
   "fold-card": "PASS",
   "hover-spill": "not checked",
@@ -994,13 +1063,13 @@
   "right-edge": "PASS",
   "centre-axis": "PASS",
   "tilt": "PASS",
-  "contrast": "WARN",
+  "contrast": "FAIL",
   "text-contrast": "WARN",
   "body-size": "PASS",
   "busy-ground": "PASS",
   "section-gaps": "FAIL",
   "proximity": "PASS",
-  "hole": "WARN",
+  "hole": "FAIL",
   "links": "WARN",
   "forms": "not checked",
   "photo-upscale": "PASS",

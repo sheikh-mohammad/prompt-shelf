@@ -1,9 +1,9 @@
 {
  "start": "2026-11-16T15:32:14.216Z",
- "round": 2,
+ "round": 3,
  "idle": 0,
  "errors": 0,
- "status": "fail",
+ "status": "open",
  "history": [
   {
    "at": "2026-11-16T15:48:32.134Z",
@@ -22,6 +22,15 @@
    "round": 2,
    "reused": false,
    "stopHookActive": false
+  },
+  {
+   "at": "2026-11-16T16:00:32.975Z",
+   "mode": "manual",
+   "status": "open",
+   "fails": 71,
+   "round": 3,
+   "reused": false,
+   "stopHookActive": false
   }
  ],
  "max": 3,
@@ -36,11 +45,11 @@
   "primary": "Create prompt"
  },
  "manual": true,
- "roundKey": "6361fd18b47ebd62:da39a3ee",
+ "roundKey": "8a7c2061110d1cb9:da39a3ee",
  "roundFree": false,
  "idleFree": false,
  "blockKey": null,
- "fp": "6361fd18b47ebd62",
+ "fp": "8a7c2061110d1cb9",
  "page": "apps/web/out/index.html",
  "found": {
   "fails": [
@@ -58,6 +67,22 @@
     ],
     "wheres": [
      "div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) > div.panel"
+    ]
+   },
+   {
+    "check": "spill",
+    "where": "div.wrap > div.hero-text > div.hero-visual > div.d-card \"Open prompt Blog post opener ✓ 412 promp\"",
+    "msg": "runs 61px past the bottom edge of the panel it sits on (div.hero-text > div.hero-visual > div.d-win-overlay > div.d-win__bar)",
+    "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "spill"
+    ],
+    "wheres": [
+     "div.wrap > div.hero-text > div.hero-visual > div.d-card \"Open prompt Blog post opener ✓ 412 promp\""
     ]
    },
    {
@@ -80,7 +105,7 @@
    {
     "check": "cut-text",
     "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1) \"Blog post opener · 24 uses\"",
-    "msg": "cut 34px by the left edge of the screen",
+    "msg": "cut 17px by the left edge of the screen",
     "fix": "give the text room: no overflow clipping a line, no line past its box",
     "widths": [
      1440,
@@ -92,38 +117,6 @@
     ],
     "wheres": [
      "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1) \"Blog post opener · 24 uses\""
-    ]
-   },
-   {
-    "check": "cut-text",
-    "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(8) \"Data analysis brief · 48 uses\"",
-    "msg": "cut 159px by the right edge of the screen",
-    "fix": "give the text room: no overflow clipping a line, no line past its box",
-    "widths": [
-     1440
-    ],
-    "from": "consistency",
-    "ids": [
-     "cut-text"
-    ],
-    "wheres": [
-     "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(8) \"Data analysis brief · 48 uses\""
-    ]
-   },
-   {
-    "check": "no-visual",
-    "where": "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\"",
-    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
-    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
-    "widths": [
-     1440
-    ],
-    "from": "consistency",
-    "ids": [
-     "no-visual"
-    ],
-    "wheres": [
-     "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\""
     ]
    },
    {
@@ -209,6 +202,38 @@
     ]
    },
    {
+    "check": "contrast",
+    "where": "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(2) \"Collections\"",
+    "msg": "body text over a picture reads at 1.6:1 at its worst tenth (needs 4.5:1), on a busy ground (and 2 more like it: \"New prompt\", \"All 412\")",
+    "fix": "put the text on a calm part of the picture, or on a solid panel",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "contrast"
+    ],
+    "wheres": [
+     "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(2) \"Collections\""
+    ]
+   },
+   {
+    "check": "contrast",
+    "where": "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(3) \"Favourites\"",
+    "msg": "body text over a picture reads at 1.1:1 at its worst tenth (needs 4.5:1) (and 2 more like it: \"Collections 28\", \"Favourites 64\")",
+    "fix": "put the text on a calm part of the picture, or on a solid panel",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "contrast"
+    ],
+    "wheres": [
+     "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(3) \"Favourites\""
+    ]
+   },
+   {
     "check": "section-gaps",
     "where": "main#top > section.hero.hero--collage / section#app-frame",
     "msg": "180px between these sections, -85% against the median 1180px",
@@ -225,6 +250,22 @@
     ]
    },
    {
+    "check": "hole",
+    "where": "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\"",
+    "msg": "an empty hole 900x384px inside the section (43% of the screen's height), with content above and below it",
+    "fix": "close the empty space: move the content together, or give the space the visual it lacks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "hole"
+    ],
+    "wheres": [
+     "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\""
+    ]
+   },
+   {
     "check": "effect-kind",
     "where": "section#marquee",
     "msg": "1 [data-moment] mark that never runs: marquee-row on section#marquee (moments.js never mounted it); a moment is judged as one only when it runs",
@@ -238,6 +279,22 @@
     ],
     "wheres": [
      "section#marquee"
+    ]
+   },
+   {
+    "check": "empty-area",
+    "where": "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\"",
+    "msg": "53% of the section is empty: 128px of empty rows between its content, 36% beside content that covers under half the container, in its 728px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "empty-area"
+    ],
+    "wheres": [
+     "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\""
     ]
    },
    {
@@ -492,7 +549,7 @@
    {
     "check": "container-edges",
     "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1) \"Blog post opener · 24 uses\"",
-    "msg": "\"Blog post opener · 24 uses\" runs -169--6px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
+    "msg": "\"Blog post opener · 24 uses\" runs -167--4px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
     "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
     "widths": [
      1440
@@ -508,7 +565,7 @@
    {
     "check": "container-edges",
     "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(8) \"Data analysis brief · 48 uses\"",
-    "msg": "\"Data analysis brief · 48 uses\" runs 1295-1464px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
+    "msg": "\"Data analysis brief · 48 uses\" runs 1297-1466px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
     "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
     "widths": [
      1440
@@ -524,7 +581,7 @@
    {
     "check": "container-edges",
     "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(2) \"Code review summary · 12 uses\"",
-    "msg": "\"Code review summary · 12 uses\" runs 26-220px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
+    "msg": "\"Code review summary · 12 uses\" runs 28-221px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
     "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
     "widths": [
      1440
@@ -535,6 +592,22 @@
     ],
     "wheres": [
      "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(2) \"Code review summary · 12 uses\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.d-win__body > div.d-main > div.d-tabs > span:nth-of-type(1) \"All 412\"",
+    "msg": "1 text block starts on a left line at x 314, 234px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.d-win__body > div.d-main > div.d-tabs > span:nth-of-type(1) \"All 412\""
     ]
    },
    {
@@ -556,7 +629,7 @@
    {
     "check": "row-lines",
     "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(8) \"Data analysis brief · 48 uses\"",
-    "msg": "\"Data analysis brief · 48 uses\" ends at 1464px, past the container's right line at 1360px (SR-7)",
+    "msg": "\"Data analysis brief · 48 uses\" ends at 1466px, past the container's right line at 1360px (SR-7)",
     "fix": "end it at the container's right line",
     "widths": [
      1440
@@ -603,8 +676,8 @@
    },
    {
     "check": "cut-text",
-    "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(3) \"Data analysis brief · 48 uses\"",
-    "msg": "cut 85px by the right edge of the screen (and 1 more like it: \"Photographs via kit libr\")",
+    "where": "div.d-main > div.d-rows > div.d-row:nth-of-type(1) > span.num \"24 uses\"",
+    "msg": "cut 8px at the bottom by the overflow of section.hero.hero--collage > div.wrap > div.hero-text > div.hero-visual (and 1 more like it: \"Public\")",
     "fix": "give the text room: no overflow clipping a line, no line past its box",
     "widths": [
      390
@@ -614,7 +687,23 @@
      "cut-text"
     ],
     "wheres": [
-     "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(3) \"Data analysis brief · 48 uses\""
+     "div.d-main > div.d-rows > div.d-row:nth-of-type(1) > span.num \"24 uses\""
+    ]
+   },
+   {
+    "check": "cut-text",
+    "where": "div.wrap > div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\"",
+    "msg": "cut 103px by the right edge of the screen",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "cut-text"
+    ],
+    "wheres": [
+     "div.wrap > div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\""
     ]
    },
    {
@@ -631,6 +720,22 @@
     ],
     "wheres": [
      "div.closing__links > div.footer__legal > span > a:nth-of-type(2) \"Terms\""
+    ]
+   },
+   {
+    "check": "contrast",
+    "where": "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(1) \"All\"",
+    "msg": "body text over a picture reads at 1.6:1 at its worst tenth (needs 4.5:1), on a busy ground (and 12 more like it: \"Collections\", \"Favourites\", \"Public\", \"Private\", ...)",
+    "fix": "put the text on a calm part of the picture, or on a solid panel",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "contrast"
+    ],
+    "wheres": [
+     "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(1) \"All\""
     ]
    },
    {
@@ -1128,6 +1233,16 @@
     "from": "consistency"
    },
    {
+    "check": "no-visual",
+    "where": "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\"",
+    "msg": "pictures, effects and mocks cover 20% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
     "check": "card-visual",
     "where": "div.group > div.grid.grid--top > div.span-6:nth-of-type(1) > div.faq \"Can I share prompts publicly? Yes. Every\"",
     "msg": "3 cards hold only text: no picture, icon, UI fragment or effect in any of them",
@@ -1195,16 +1310,6 @@
     "where": "section#marquee / section#faq",
     "msg": "1642px between these sections (never on one screen), +39% against the median 1180px",
     "fix": "use one gap between sections (all within 25% of each other)",
-    "widths": [
-     1440
-    ],
-    "from": "consistency"
-   },
-   {
-    "check": "hole",
-    "where": "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\"",
-    "msg": "an empty hole 900x228px inside the section (25% of the screen's height), with content above and below it",
-    "fix": "close the empty space: move the content together, or give the space the visual it lacks",
     "widths": [
      1440
     ],
@@ -1361,16 +1466,6 @@
     "from": "consistency"
    },
    {
-    "check": "fade-cut",
-    "where": "div.d-win__body > div.d-main > div.d-tabs > span:nth-of-type(1) \"All 412\"",
-    "msg": "2 lines of div.d-win fade out under its edge (\"All 412\", \"Writing · 4 variables\"): drawn at a fraction of #111111 on #f4f4f4, half-erased",
-    "fix": "fit the mock's rows inside its panel (fewer rows, a taller panel), or end the fade below the last whole row: no row half-erased",
-    "widths": [
-     1440
-    ],
-    "from": "consistency"
-   },
-   {
     "check": "nav-current",
     "where": "header.nav",
     "msg": "the nav stays on screen with 6 links to the page's sections, but never marks the one you are in (no link changes as the page scrolls)",
@@ -1388,6 +1483,16 @@
     "widths": [
      1440,
      390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-caption",
+    "where": "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(4) \"Public\"",
+    "msg": "a muted 13px line of 1 row sits 13px under the picture m11317510-1200.webp: it reads as a caption: \"Public\"; no caption or description under any image, render or visual (house rule)",
+    "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line",
+    "widths": [
+     1440
     ],
     "from": "consistency"
    },
@@ -1432,6 +1537,16 @@
     "from": "consistency"
    },
    {
+    "check": "fade-cut",
+    "where": "div.hero-visual > div.d-card > div.d-card__row > span.d-chip.d-chip--data \"Blog post opener\"",
+    "msg": "a line of div.d-card fades out under its edge (\"Blog post opener\"): drawn at a fraction of #111111 on #f4f4f4, half-erased",
+    "fix": "fit the mock's rows inside its panel (fewer rows, a taller panel), or end the fade below the last whole row: no row half-erased",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
     "check": "copy-em-dash",
     "msg": "5 em dashes in the body (budget 2)",
     "fix": "use a comma, a colon, parentheses or a full stop where each is natural (references/copy-tells.md)",
@@ -1443,8 +1558,8 @@
   ],
   "crashed": [],
   "seconds": {
-   "consistency": 232,
-   "layout": 4
+   "consistency": 222,
+   "layout": 5
   }
  },
  "open": [
@@ -1462,6 +1577,22 @@
    ],
    "wheres": [
     "div.group > div.grid:nth-of-type(3) > article.card.card--row:nth-of-type(2) > div.panel"
+   ]
+  },
+  {
+   "check": "spill",
+   "where": "div.wrap > div.hero-text > div.hero-visual > div.d-card \"Open prompt Blog post opener ✓ 412 promp\"",
+   "msg": "runs 61px past the bottom edge of the panel it sits on (div.hero-text > div.hero-visual > div.d-win-overlay > div.d-win__bar)",
+   "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "spill"
+   ],
+   "wheres": [
+    "div.wrap > div.hero-text > div.hero-visual > div.d-card \"Open prompt Blog post opener ✓ 412 promp\""
    ]
   },
   {
@@ -1484,7 +1615,7 @@
   {
    "check": "cut-text",
    "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1) \"Blog post opener · 24 uses\"",
-   "msg": "cut 34px by the left edge of the screen",
+   "msg": "cut 17px by the left edge of the screen",
    "fix": "give the text room: no overflow clipping a line, no line past its box",
    "widths": [
     1440,
@@ -1496,38 +1627,6 @@
    ],
    "wheres": [
     "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1) \"Blog post opener · 24 uses\""
-   ]
-  },
-  {
-   "check": "cut-text",
-   "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(8) \"Data analysis brief · 48 uses\"",
-   "msg": "cut 159px by the right edge of the screen",
-   "fix": "give the text room: no overflow clipping a line, no line past its box",
-   "widths": [
-    1440
-   ],
-   "from": "consistency",
-   "ids": [
-    "cut-text"
-   ],
-   "wheres": [
-    "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(8) \"Data analysis brief · 48 uses\""
-   ]
-  },
-  {
-   "check": "no-visual",
-   "where": "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\"",
-   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
-   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
-   "widths": [
-    1440
-   ],
-   "from": "consistency",
-   "ids": [
-    "no-visual"
-   ],
-   "wheres": [
-    "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\""
    ]
   },
   {
@@ -1613,6 +1712,38 @@
    ]
   },
   {
+   "check": "contrast",
+   "where": "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(2) \"Collections\"",
+   "msg": "body text over a picture reads at 1.6:1 at its worst tenth (needs 4.5:1), on a busy ground (and 2 more like it: \"New prompt\", \"All 412\")",
+   "fix": "put the text on a calm part of the picture, or on a solid panel",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "contrast"
+   ],
+   "wheres": [
+    "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(2) \"Collections\""
+   ]
+  },
+  {
+   "check": "contrast",
+   "where": "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(3) \"Favourites\"",
+   "msg": "body text over a picture reads at 1.1:1 at its worst tenth (needs 4.5:1) (and 2 more like it: \"Collections 28\", \"Favourites 64\")",
+   "fix": "put the text on a calm part of the picture, or on a solid panel",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "contrast"
+   ],
+   "wheres": [
+    "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(3) \"Favourites\""
+   ]
+  },
+  {
    "check": "section-gaps",
    "where": "main#top > section.hero.hero--collage / section#app-frame",
    "msg": "180px between these sections, -85% against the median 1180px",
@@ -1629,6 +1760,22 @@
    ]
   },
   {
+   "check": "hole",
+   "where": "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\"",
+   "msg": "an empty hole 900x384px inside the section (43% of the screen's height), with content above and below it",
+   "fix": "close the empty space: move the content together, or give the space the visual it lacks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "hole"
+   ],
+   "wheres": [
+    "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\""
+   ]
+  },
+  {
    "check": "effect-kind",
    "where": "section#marquee",
    "msg": "1 [data-moment] mark that never runs: marquee-row on section#marquee (moments.js never mounted it); a moment is judged as one only when it runs",
@@ -1642,6 +1789,22 @@
    ],
    "wheres": [
     "section#marquee"
+   ]
+  },
+  {
+   "check": "empty-area",
+   "where": "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\"",
+   "msg": "53% of the section is empty: 128px of empty rows between its content, 36% beside content that covers under half the container, in its 728px of rows (WARN over 35%, FAIL over 50%)",
+   "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "empty-area"
+   ],
+   "wheres": [
+    "main#top > section.hero.hero--collage \"412 prompts saved, ready to reuse\""
    ]
   },
   {
@@ -1896,7 +2059,7 @@
   {
    "check": "container-edges",
    "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(1) \"Blog post opener · 24 uses\"",
-   "msg": "\"Blog post opener · 24 uses\" runs -169--6px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
+   "msg": "\"Blog post opener · 24 uses\" runs -167--4px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
    "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
    "widths": [
     1440
@@ -1912,7 +2075,7 @@
   {
    "check": "container-edges",
    "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(8) \"Data analysis brief · 48 uses\"",
-   "msg": "\"Data analysis brief · 48 uses\" runs 1295-1464px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
+   "msg": "\"Data analysis brief · 48 uses\" runs 1297-1466px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
    "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
    "widths": [
     1440
@@ -1928,7 +2091,7 @@
   {
    "check": "container-edges",
    "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(2) \"Code review summary · 12 uses\"",
-   "msg": "\"Code review summary · 12 uses\" runs 26-220px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
+   "msg": "\"Code review summary · 12 uses\" runs 28-221px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (SR-6)",
    "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
    "widths": [
     1440
@@ -1939,6 +2102,22 @@
    ],
    "wheres": [
     "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(2) \"Code review summary · 12 uses\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.d-win__body > div.d-main > div.d-tabs > span:nth-of-type(1) \"All 412\"",
+   "msg": "1 text block starts on a left line at x 314, 234px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.d-win__body > div.d-main > div.d-tabs > span:nth-of-type(1) \"All 412\""
    ]
   },
   {
@@ -1960,7 +2139,7 @@
   {
    "check": "row-lines",
    "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(8) \"Data analysis brief · 48 uses\"",
-   "msg": "\"Data analysis brief · 48 uses\" ends at 1464px, past the container's right line at 1360px (SR-7)",
+   "msg": "\"Data analysis brief · 48 uses\" ends at 1466px, past the container's right line at 1360px (SR-7)",
    "fix": "end it at the container's right line",
    "widths": [
     1440
@@ -2007,8 +2186,8 @@
   },
   {
    "check": "cut-text",
-   "where": "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(3) \"Data analysis brief · 48 uses\"",
-   "msg": "cut 85px by the right edge of the screen (and 1 more like it: \"Photographs via kit libr\")",
+   "where": "div.d-main > div.d-rows > div.d-row:nth-of-type(1) > span.num \"24 uses\"",
+   "msg": "cut 8px at the bottom by the overflow of section.hero.hero--collage > div.wrap > div.hero-text > div.hero-visual (and 1 more like it: \"Public\")",
    "fix": "give the text room: no overflow clipping a line, no line past its box",
    "widths": [
     390
@@ -2018,7 +2197,23 @@
     "cut-text"
    ],
    "wheres": [
-    "div.span-6:nth-of-type(1) > div > div.marquee__track > span.marquee__item:nth-of-type(3) \"Data analysis brief · 48 uses\""
+    "div.d-main > div.d-rows > div.d-row:nth-of-type(1) > span.num \"24 uses\""
+   ]
+  },
+  {
+   "check": "cut-text",
+   "where": "div.wrap > div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\"",
+   "msg": "cut 103px by the right edge of the screen",
+   "fix": "give the text room: no overflow clipping a line, no line past its box",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "cut-text"
+   ],
+   "wheres": [
+    "div.wrap > div.closing__links > div.footer__legal > a.credits \"Photographs via kit library stand-ins\""
    ]
   },
   {
@@ -2035,6 +2230,22 @@
    ],
    "wheres": [
     "div.closing__links > div.footer__legal > span > a:nth-of-type(2) \"Terms\""
+   ]
+  },
+  {
+   "check": "contrast",
+   "where": "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(1) \"All\"",
+   "msg": "body text over a picture reads at 1.6:1 at its worst tenth (needs 4.5:1), on a busy ground (and 12 more like it: \"Collections\", \"Favourites\", \"Public\", \"Private\", ...)",
+   "fix": "put the text on a calm part of the picture, or on a solid panel",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "contrast"
+   ],
+   "wheres": [
+    "div.d-win-overlay > div.d-win__body > div.d-side > span:nth-of-type(1) \"All\""
    ]
   },
   {
@@ -2511,6 +2722,7 @@
   }
  ],
  "waived": [],
- "warnCount": 33,
- "at": "2026-11-16T15:54:58.244Z"
+ "warnCount": 34,
+ "at": "2026-11-16T16:00:32.976Z",
+ "openTold": true
 }
