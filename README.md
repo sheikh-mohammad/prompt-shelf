@@ -1,158 +1,93 @@
-# Turborepo starter
+# Prompt Shelf
 
-This Turborepo starter is maintained by the Turborepo core team.
+A Next.js prompt library for browsing and organizing reusable prompts.
 
-## Using this example
+Prompt Shelf is a Turborepo monorepo containing the Prompt Shelf web app — a landing/homepage experience for saving prompts, organizing them into collections, marking favourites, and managing public/private visibility with reusable prompt variables.
 
-Run the following command:
+## What’s inside
 
-```sh
-npx create-turbo@latest
+### Apps
+
+- `apps/web`: Next.js web app (Prompt Shelf UI)
+
+### Packages
+
+- `packages/ui`: shared React component library
+- `packages/eslint-config`: shared ESLint configuration
+- `packages/typescript-config`: shared TypeScript configuration
+
+## Tech stack
+
+- [Next.js](https://nextjs.org/) (App Router)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Turborepo](https://turborepo.dev/)
+
+## Prerequisites
+
+- **Node.js**: `>=24` (see `engines` in `package.json`)
+- **npm**: `11.20.0` (see `devEngines.packageManager` in `package.json`)
+
+## Getting started
+
+Install dependencies from the repository root:
+
+```bash
+npm install
 ```
 
-## What's inside?
+> If your installed npm version differs from the project’s `devEngines` requirement, you can run installs with the pinned version via `npx --yes npm@11.20.0 install`.
 
-This Turborepo includes the following packages/apps:
+## Development
 
-### Apps and Packages
+Run all workspace dev tasks:
 
-- `web`: a [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by the `web` application
-- `@repo/eslint-config`: `eslint` configurations (includes `@next/eslint-plugin-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo build
+```bash
+npm run dev
 ```
 
-Without global `turbo`, use your package manager:
+Run only the web app:
 
-```sh
-cd my-turborepo
-npx turbo build
-npm exec turbo build
-npm exec turbo build
-```
-
-You can build a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo build --filter=web
-```
-
-Without global `turbo`:
-
-```sh
-npx turbo build --filter=web
-npm exec turbo build --filter=web
-npm exec turbo build --filter=web
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo dev
-```
-
-Without global `turbo`, use your package manager:
-
-```sh
-cd my-turborepo
-npx turbo dev
-npm exec turbo dev
-npm exec turbo dev
-```
-
-You can develop a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo dev --filter=web
-```
-
-Without global `turbo`:
-
-```sh
+```bash
 npx turbo dev --filter=web
-npm exec turbo dev --filter=web
-npm exec turbo dev --filter=web
 ```
 
-### Remote Caching
+The web app runs at [http://localhost:3000](http://localhost:3000).
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+## Build
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo login
+```bash
+npm run build
 ```
 
-Without global `turbo`, use your package manager:
+Build only the web app:
 
-```sh
-cd my-turborepo
-npx turbo login
-npm exec turbo login
-npm exec turbo login
+```bash
+npx turbo build --filter=web
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+## Quality checks
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo link
+```bash
+npm run lint         # Lint all workspaces
+npm run check-types  # Type-check all workspaces
+npm run format       # Format with Prettier
 ```
 
-Without global `turbo`:
+## Repository structure
 
-```sh
-npx turbo link
-npm exec turbo link
-npm exec turbo link
+```text
+.
+├─ apps/
+│  └─ web/                 # Next.js app
+├─ packages/
+│  ├─ ui/                  # Shared UI components
+│  ├─ eslint-config/       # Shared ESLint config
+│  └─ typescript-config/   # Shared TS config
+├─ turbo.json              # Turborepo task pipeline
+└─ package.json            # Workspace root config
 ```
 
-## Useful Links
+## License
 
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.dev/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.dev/docs/reference/configuration)
-- [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
+No license file is currently included in this repository.
